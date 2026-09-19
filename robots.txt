@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pathik0007.github.io/postgrad-research-planner/sitemap.xml
