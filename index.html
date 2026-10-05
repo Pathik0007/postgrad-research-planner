@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="Free postgraduate research planner: find a PhD supervisor, draft a research proposal and outreach emails, build an academic CV and portfolio, and use Researcher Arena for scholarly-graph and researcher search, dataset discovery, research gaps, citations and compute planning.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='5' fill='%23132a4f'/><path d='M4 5.5c2-1 5-1.3 8 .3v13c-3-1.6-6-1.3-8-.3Z' fill='none' stroke='%23f6f4ef' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/><path d='M20 5.5c-2-1-5-1.3-8 .3v13c3-1.6 6-1.3 8-.3Z' fill='none' stroke='%23f6f4ef' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Postgraduate Research Planner", "applicationCategory": "EducationApplication", "operatingSystem": "Any (runs in a web browser)", "description": "Free postgraduate research planner: find a PhD supervisor, draft a research proposal and outreach emails, build an academic CV and portfolio, and use Researcher Arena for scholarly-graph and researcher search, dataset discovery, research gaps, citations and compute planning.", "url": "https://pathik0007.github.io/postgrad-research-planner/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find a PhD supervisor?", "acceptedAnswer": {"@type": "Answer", "text": "Pick your research interests in your profile, then open Find Supervisors. It builds live searches across Google Scholar, ORCID, LinkedIn, ResearchGate and site-restricted university faculty pages so you find and vet a real person yourself \u2014 check their last two years of publications and current funding before reaching out."}}, {"@type": "Question", "name": "How do I write a PhD research proposal?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Proposal Builder's nine guided sections \u2014 title, background, research questions, significance, methodology, research environment, timeline, ethics and references. Each section explains what it needs, and most can draft a starting point from your profile that you edit before using."}}, {"@type": "Question", "name": "How do I email a PhD supervisor?", "acceptedAnswer": {"@type": "Answer", "text": "Open Outreach Emails, choose \"cold introduction,\" and fill in what you know about the recipient. Keep the first email under 200 words with one clear ask, and wait two to three weeks before a single polite follow-up."}}, {"@type": "Question", "name": "What's the difference between an academic CV and a resume?", "acceptedAnswer": {"@type": "Answer", "text": "An academic CV is comprehensive and grows over your career \u2014 publications, talks, grants, teaching \u2014 with no length limit. A resume is one to two pages, cut down to what's relevant to a specific role. See CV & R\u00e9sum\u00e9 for both, with real template links."}}, {"@type": "Question", "name": "How much GPU memory (VRAM) do I need to train or run a model?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly: parameters \u00d7 bytes-per-parameter for your precision (4 bytes for FP32, 2 for FP16/BF16, 1 for INT8), \u00d71.2 for activations and overhead if you're only running inference, or \u00d7~4.8 if you're training (optimizer states and gradients add up fast). Researcher Arena's compute tool does this calculation for your exact model size and precision."}}, {"@type": "Question", "name": "How do I know if my dataset's classes are imbalanced?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the largest class to the smallest in your target column: an imbalance ratio much above 3:1 usually needs handling (resampling, class weights, or a metric other than plain accuracy). Paste a CSV into Researcher Arena's dataset corner for a real, in-browser count of rows, missing values, duplicates and class balance \u2014 nothing is uploaded anywhere."}}, {"@type": "Question", "name": "What is the Researcher Arena?", "acceptedAnswer": {"@type": "Answer", "text": "A set of research-planning-and-development tools above the core workflow: scholarly-graph and people search, a dataset corner with a real in-browser dataset health check, an evidence-grounded research-gap finder, a multi-style citation generator, compute/GPU guidance with no invented prices, a reproducibility checklist, a statistical-test advisor, and a literature-matrix builder. Open it from the top of the sidebar."}}, {"@type": "Question", "name": "Does this tool store or share my information?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything is saved only in this browser's local storage. Nothing is uploaded to a server, and the tool has no login or tracking."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I find a PhD supervisor?", "acceptedAnswer": {"@type": "Answer", "text": "Pick your research interests in your profile, then open Find Supervisors. It builds live searches across Google Scholar, ORCID, LinkedIn, ResearchGate and site-restricted university faculty pages so you find and vet a real person yourself \u2014 check their last two years of publications and current funding before reaching out."}}, {"@type": "Question", "name": "How do I write a PhD research proposal?", "acceptedAnswer": {"@type": "Answer", "text": "Use the Proposal Builder's nine guided sections \u2014 title, background, research questions, significance, methodology, research environment, timeline, ethics and references. Each section explains what it needs, and most can draft a starting point from your profile that you edit before using."}}, {"@type": "Question", "name": "How do I email a PhD supervisor?", "acceptedAnswer": {"@type": "Answer", "text": "Open Outreach Emails, choose \"cold introduction,\" and fill in what you know about the recipient. Keep the first email under 200 words with one clear ask, and wait two to three weeks before a single polite follow-up."}}, {"@type": "Question", "name": "What's the difference between an academic CV and a resume?", "acceptedAnswer": {"@type": "Answer", "text": "An academic CV is comprehensive and grows over your career \u2014 publications, talks, grants, teaching \u2014 with no length limit. A resume is one to two pages, cut down to what's relevant to a specific role. See CV & R\u00e9sum\u00e9 for both, with real template links."}}, {"@type": "Question", "name": "How much GPU memory (VRAM) do I need to train or run a model?", "acceptedAnswer": {"@type": "Answer", "text": "For inference, roughly parameters \u00d7 bytes-per-parameter for your precision (4 bytes for FP32, 2 for FP16/BF16, 1 for INT8), plus about 20% for activations and overhead. A full fine-tune with the Adam optimizer needs about 16 bytes per parameter \u2014 weights, gradients and optimizer states \u2014 before activations, so a 7B model needs well over 100 GB unless you use LoRA/QLoRA or sharding. Researcher Arena's compute tool does this calculation for your exact model size and precision, and names a GPU tier that fits."}}, {"@type": "Question", "name": "How do I know if my dataset's classes are imbalanced?", "acceptedAnswer": {"@type": "Answer", "text": "Compare the largest class to the smallest in your target column: a majority-to-minority ratio beyond roughly 3\u20134:1 usually needs handling (resampling, class weights, or a metric other than plain accuracy). Upload a CSV in Researcher Arena's dataset corner for a real, in-browser count of rows, missing values, duplicates and class balance \u2014 nothing is uploaded anywhere."}}, {"@type": "Question", "name": "What is the Researcher Arena?", "acceptedAnswer": {"@type": "Answer", "text": "A set of research-planning-and-development tools above the core workflow: scholarly-graph and people search, a dataset corner with a real in-browser dataset health check, an evidence-grounded research-gap finder, a multi-style citation generator, compute/GPU guidance with no invented prices, a reproducibility checklist, a statistical-test advisor, and a literature-matrix builder. Open it from the top of the sidebar."}}, {"@type": "Question", "name": "Does this tool store or share my information?", "acceptedAnswer": {"@type": "Answer", "text": "Everything is saved only in this browser's local storage \u2014 there's no server, login or tracking, and nothing is uploaded. The one opt-in exception: when the page is opened inside Claude and you click an AI draft button, the text that draft needs (such as your profile summary) is sent to Claude to write it. On the public site, Copy AI prompt only copies text to your clipboard."}}]}</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +28,12 @@
 <style>
 :root{
   --paper:#EEF0EE; --surface:#FFFFFF; --surface-2:#F6F7F5;
-  --ink:#171B22; --ink-soft:#54606C; --ink-faint:#8C97A0;
+  --ink:#171B22; --ink-soft:#54606C; --ink-faint:#636E79;
   --line:#D8DCD9; --line-strong:#BFC6C1;
   --navy:#1B2C48; --navy-soft:#33496C; --navy-ink:#0F1930;
   --accent:#9E2A3B; --accent-hover:#831F2E; --accent-soft:#F3E1DF; --accent-ink:#6E1520;
   --good:#2E6B4F; --good-bg:#E3EFE7; --warn:#8A5E10; --warn-bg:#F4E7CB; --todo:#54606C; --todo-bg:#E7E9E5;
-  --focus:#26647F;
+  --focus:#26647F; --on-accent:#FFFFFF; --on-focus:#FFFFFF;
   --r-s:4px; --r-m:9px; --r-l:14px;
   --shadow-1: 0 1px 2px rgba(20,26,20,.06), 0 1px 1px rgba(20,26,20,.04);
   --font-display:'Source Serif 4', Georgia, 'Times New Roman', serif;
@@ -43,23 +43,23 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --paper:#10151C; --surface:#171E28; --surface-2:#1C2430;
-    --ink:#E7E9E4; --ink-soft:#AAB3BE; --ink-faint:#76808C;
+    --ink:#E7E9E4; --ink-soft:#AAB3BE; --ink-faint:#8A949F;
     --line:#2A3341; --line-strong:#3B4657;
     --navy:#9FBCE0; --navy-soft:#7FA3CC; --navy-ink:#DCE7F5;
     --accent:#E17685; --accent-hover:#EA96A2; --accent-soft:#33232A; --accent-ink:#F3B6BF;
     --good:#7FC49E; --good-bg:#1C3128; --warn:#E3B458; --warn-bg:#332A15; --todo:#AAB3BE; --todo-bg:#212a35;
-    --focus:#7FB8DE;
+    --focus:#7FB8DE; --on-accent:#1A0B0F; --on-focus:#0B1620; color-scheme:dark;
     --shadow-1: 0 1px 2px rgba(0,0,0,.4);
   }
 }
 :root[data-theme="dark"]{
   --paper:#10151C; --surface:#171E28; --surface-2:#1C2430;
-  --ink:#E7E9E4; --ink-soft:#AAB3BE; --ink-faint:#76808C;
+  --ink:#E7E9E4; --ink-soft:#AAB3BE; --ink-faint:#8A949F;
   --line:#2A3341; --line-strong:#3B4657;
   --navy:#9FBCE0; --navy-soft:#7FA3CC; --navy-ink:#DCE7F5;
   --accent:#E17685; --accent-hover:#EA96A2; --accent-soft:#33232A; --accent-ink:#F3B6BF;
   --good:#7FC49E; --good-bg:#1C3128; --warn:#E3B458; --warn-bg:#332A15; --todo:#AAB3BE; --todo-bg:#212a35;
-  --focus:#7FB8DE;
+  --focus:#7FB8DE; --on-accent:#1A0B0F; --on-focus:#0B1620; color-scheme:dark;
   --shadow-1: 0 1px 2px rgba(0,0,0,.4);
 }
 *{box-sizing:border-box;}
@@ -79,16 +79,13 @@ button{font-family:inherit; cursor:pointer;}
 .masthead{
   display:flex; align-items:center; gap:14px; padding:16px 24px;
   border-bottom:1px solid var(--line); background:var(--surface);
-  position:sticky; top:0; z-index:40;
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:40;
 }
-.masthead-brand{
-  display:flex; align-items:center; gap:14px; min-width:0;
-  background:none; border:none; padding:2px; margin:-2px; font:inherit; text-align:left;
-  color:inherit; cursor:pointer; border-radius:var(--r-s);
-}
-.masthead-brand:hover .masthead-title{color:var(--accent-ink);}
-.masthead-brand:hover .crest{background:var(--navy-soft);}
-.masthead-brand:focus-visible{outline:2px solid var(--focus); outline-offset:2px;}
+.masthead-brand{display:flex; align-items:center; gap:14px; min-width:0;}
+a.crest{text-decoration:none;}
+a.crest:hover{background:var(--navy-soft);}
+.masthead-title a{color:inherit; text-decoration:none; border-radius:var(--r-s);}
+.masthead-title a:hover{color:var(--accent-ink);}
 .crest{
   width:38px; height:38px; flex:none; border-radius:8px; background:var(--navy);
   display:flex; align-items:center; justify-content:center; transition:background .14s ease;
@@ -106,6 +103,7 @@ button{font-family:inherit; cursor:pointer;}
 .sidenav{
   width:236px; flex:none; border-right:1px solid var(--line); background:var(--surface);
   padding:14px 10px 20px; overflow-y:auto;
+  position:sticky; top:calc(var(--mh, 71px) + env(safe-area-inset-top, 0px)); align-self:flex-start; height:calc(100vh - var(--mh, 71px) - env(safe-area-inset-top, 0px));
 }
 .sidenav-group-label{
   font-family:var(--font-mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
@@ -162,7 +160,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-faint);}
 .btn:active{transform:translateY(1px);}
 .btn svg{width:15px; height:15px; stroke:currentColor;}
 .btn:hover{background:var(--surface-2);}
-.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff;}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:var(--on-accent);}
 .btn.primary:hover{background:var(--accent-hover); border-color:var(--accent-hover);}
 .btn.ai{background:var(--surface); border-color:var(--accent-soft); color:var(--accent-ink);}
 .btn.ai:hover{background:var(--accent-soft);}
@@ -269,16 +267,21 @@ input::placeholder,textarea::placeholder{color:var(--ink-faint);}
 
 @media (max-width:820px){
   .shell{flex-direction:column;}
-  .sidenav{width:100%; display:flex; overflow-x:auto; border-right:none; border-bottom:1px solid var(--line); padding:8px 10px; gap:4px;}
+  .sidenav{width:100%; display:flex; overflow-x:auto; border-right:none; border-bottom:1px solid var(--line); padding:8px 10px; gap:4px;
+    position:sticky; top:env(safe-area-inset-top, 0px); z-index:30; height:auto; align-self:stretch;}
   .sidenav-group-label{display:none;}
-  .navitem{flex:none;}
+  .navitem{flex:none; width:auto;} /* base rule is width:100%, which made every pill as wide as the bar: one visible item at a time */
+  /* Dashboard is pinned to the left edge of the swipeable bar, so home is one tap away from any panel. */
+  .navitem[data-target="dashboard"]{order:-1; position:sticky; left:0; z-index:2; background:var(--surface); box-shadow:-12px 0 0 0 var(--surface), 8px 0 8px -8px rgba(0,0,0,.28);}
+  .navitem.active[data-target="dashboard"]{background:var(--accent-soft);}
+  #arenaToolBody{scroll-margin-top:64px;}
   .content{padding:22px 16px 60px;}
 
   /* Mobile masthead: stack into two rows instead of forcing title+tag+meta into
      one unwrapped flex row (that squeeze caused the title/tag text to wrap into a
      single-word-per-line column while the meta bar, vertically centered against
      that now-very-tall column, floated over the middle of it). */
-  .masthead{flex-wrap:wrap; row-gap:10px; padding:12px 16px;}
+  .masthead{flex-wrap:wrap; row-gap:10px; padding:12px 16px; position:static;}
   .crest{width:32px; height:32px;}
   .crest svg{width:18px; height:18px;}
   .masthead-title{font-size:16.5px;}
@@ -291,7 +294,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-faint);}
 /* ---------- Researcher Arena ---------- */
 .arena-tool-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
 @media (max-width:880px){ .arena-tool-grid{grid-template-columns:repeat(2,1fr);} }
-@media (max-width:560px){ .arena-tool-grid{grid-template-columns:1fr;} }
+@media (max-width:560px){ .arena-tool-grid{grid-template-columns:1fr 1fr;} .arena-tool-desc{display:none;} .arena-tool-card{padding:10px 11px;} }
 .arena-tool-card{display:flex; flex-direction:column; gap:5px; text-align:left; padding:12px 13px; border:1px solid var(--line); border-radius:var(--r-m); background:var(--surface); color:inherit; transition:background .14s ease, border-color .14s ease;}
 .arena-tool-card:hover{background:var(--surface-2); border-color:var(--line-strong);}
 .arena-tool-card.active{background:var(--navy); border-color:var(--navy); color:var(--paper);}
@@ -319,29 +322,34 @@ table.matrix-table td textarea{resize:vertical; min-height:34px;}
 .glossary-item .use-note{font-size:12.4px; color:var(--ink-soft);}
 .glossary-item .avoid-note{font-size:12.4px; color:var(--accent-ink);}
 .stat-answer-row{display:flex; flex-wrap:wrap; gap:8px;}
-.stat-answer-row .chip.selected{background:var(--focus); border-color:var(--focus); color:#fff;}
+.stat-answer-row .chip.selected{background:var(--focus); border-color:var(--focus); color:var(--on-focus);}
 .compute-table-wrap{overflow-x:auto;}
 table.compute-table{border-collapse:collapse; width:100%; min-width:640px; font-size:12.6px;}
 table.compute-table th{background:var(--surface-2); text-align:left; padding:8px 10px; font-family:var(--font-mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-faint); border-bottom:1px solid var(--line);}
 table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
 .result-box{border:1px solid var(--line-strong); border-radius:var(--r-m); padding:14px 16px; background:var(--surface-2);}
 .result-box .result-headline{font-family:var(--font-display); font-size:18px; font-weight:600; margin-bottom:4px;}
+.stage-date.past{opacity:.72;}
+.warn-note{color:var(--warn); font-size:12.5px;}
+.confirm-overlay{position:fixed; inset:0; background:rgba(8,12,18,.5); display:flex; align-items:center; justify-content:center; padding:16px; z-index:200;}
+.confirm-box{background:var(--surface); color:var(--ink); border:1px solid var(--line-strong); border-radius:var(--r-l); padding:20px; width:100%; max-width:440px; box-shadow:0 12px 32px rgba(0,0,0,.28); display:flex; flex-direction:column; gap:16px;}
+.confirm-box p{font-size:14px; line-height:1.5;}
+.confirm-actions{justify-content:flex-end;}
 </style>
 </head>
 <body>
 
-
 <div class="app">
   <header class="masthead">
-    <button type="button" class="masthead-brand" data-nav="dashboard" aria-label="Go to Dashboard (home)" title="Go to Dashboard">
-      <div class="crest" aria-hidden="true">
+    <div class="masthead-brand">
+      <a class="crest" href="#dashboard" data-nav="dashboard" tabindex="-1" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2-1 5-1.3 8 .3v13c-3-1.6-6-1.3-8-.3Z"/><path d="M20 5.5c-2-1-5-1.3-8 .3v13c3-1.6 6-1.3 8-.3Z"/></svg>
-      </div>
+      </a>
       <div class="masthead-text">
-        <h1 class="masthead-title">Postgraduate Research&nbsp;Planner</h1>
+        <h1 class="masthead-title"><a href="#dashboard" data-nav="dashboard" title="Go to Dashboard">Postgraduate Research&nbsp;Planner</a></h1>
         <div class="masthead-tag">PhD &amp; MRes research planning and development &mdash; supervisors, proposal, outreach, CV/portfolio, Researcher Arena.</div>
       </div>
-    </button>
+    </div>
     <div class="masthead-spacer"></div>
     <div class="masthead-meta" id="dataToolsArea">
       <span class="meta-status"><span class="dot" aria-hidden="true"></span>Saved to this browser only</span>
@@ -403,10 +411,10 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
         <div class="stack">
           <h3 class="section-title">Getting started</h3>
           <div class="getting-started">
-            <a class="gs-card" data-nav="profile"><span class="gs-num">01</span><h4>Build your profile</h4><p>Interests, target degree, region and background &mdash; set once, used everywhere.</p></a>
-            <a class="gs-card" data-nav="supervisors"><span class="gs-num">02</span><h4>Shortlist supervisors</h4><p>Turn your interests into targeted searches across Scholar, ResearchGate and university sites.</p></a>
-            <a class="gs-card" data-nav="proposal"><span class="gs-num">03</span><h4>Draft proposal &amp; outreach</h4><p>Work through a guided proposal structure and a tailored first email.</p></a>
-            <a class="gs-card" data-nav="cv"><span class="gs-num">04</span><h4>Package your CV &amp; portfolio</h4><p>Pick a style, then track deadlines on the application timeline.</p></a>
+            <a class="gs-card" href="#profile" data-nav="profile"><span class="gs-num">01</span><h4>Build your profile</h4><p>Interests, target degree, region and background &mdash; set once, used everywhere.</p></a>
+            <a class="gs-card" href="#supervisors" data-nav="supervisors"><span class="gs-num">02</span><h4>Shortlist supervisors</h4><p>Turn your interests into targeted searches across Scholar, ResearchGate and university sites.</p></a>
+            <a class="gs-card" href="#proposal" data-nav="proposal"><span class="gs-num">03</span><h4>Draft proposal &amp; outreach</h4><p>Work through a guided proposal structure and a tailored first email.</p></a>
+            <a class="gs-card" href="#cv" data-nav="cv"><span class="gs-num">04</span><h4>Package your CV &amp; portfolio</h4><p>Pick a style, then track deadlines on the application timeline.</p></a>
           </div>
         </div>
 
@@ -417,7 +425,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
 
         <div class="note">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><line x1="12" y1="11" x2="12" y2="16.5"/><circle cx="12" cy="8" r=".6" fill="var(--navy)"/></svg>
-          <p><strong style="color:var(--ink);">How this works.</strong> Postgraduate Research Planner keeps everything in this browser &mdash; nothing you type is uploaded anywhere, so fill in your profile once and every other section reads from it automatically. An optional AI draft button (marked with a spark) asks Claude directly where a step benefits from a second pair of eyes, and always leaves the result editable before you use it anywhere. For finding real people &mdash; supervisors, faculty, labs &mdash; the tool never guesses names or emails; it builds targeted search links to Google Scholar, ResearchGate, ORCID and university sites so you find and verify the actual person yourself, and every outbound link opens the real site in a new tab. <strong style="color:var(--ink);">Researcher Arena</strong>, at the top of the sidebar, adds the evidence layer &mdash; scholarly-graph and dataset search, research gaps, citations, compute guidance and more &mdash; held to the same rule.</p>
+          <p><strong style="color:var(--ink);">How this works.</strong> Postgraduate Research Planner keeps everything in this browser &mdash; nothing you type is uploaded anywhere, so fill in your profile once and every other section reads from it automatically. Where a step benefits from a second pair of eyes, an optional AI draft button (marked with a spark) asks Claude directly when this page is opened inside Claude; on the public site the same spot offers <em>Copy AI prompt</em>, so you can paste the identical, guard-railed prompt into any assistant you use. Either way the result stays editable before you use it anywhere. For finding real people &mdash; supervisors, faculty, labs &mdash; the tool never guesses names or emails; it builds targeted search links to Google Scholar, ResearchGate, ORCID and university sites so you find and verify the actual person yourself, and every outbound link opens the real site in a new tab. <strong style="color:var(--ink);">Researcher Arena</strong>, at the top of the sidebar, adds the evidence layer &mdash; scholarly-graph and dataset search, research gaps, citations, compute guidance and more &mdash; held to the same rule.</p>
         </div>
 
         <div class="card">
@@ -441,11 +449,11 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             </div>
             <div class="faq-item">
               <h3>How much GPU memory (VRAM) do I need to train or run a model?</h3>
-              <p>Roughly: parameters &times; bytes-per-parameter for your precision (4 bytes for FP32, 2 for FP16/BF16, 1 for INT8), &times;1.2 for activations and overhead if you're only running inference, or &times;~4.8 if you're training (optimizer states and gradients add up fast). Researcher Arena's compute tool does this calculation for your exact model size and precision.</p>
+              <p>For inference, roughly parameters &times; bytes-per-parameter for your precision (4 bytes for FP32, 2 for FP16/BF16, 1 for INT8), plus about 20% for activations and overhead. A full fine-tune with the Adam optimizer needs about 16 bytes per parameter &mdash; weights, gradients and optimizer states &mdash; before activations, so a 7B model needs well over 100 GB unless you use LoRA/QLoRA or sharding. Researcher Arena's compute tool does this calculation for your exact model size and precision, and names a GPU tier that fits.</p>
             </div>
             <div class="faq-item">
               <h3>How do I know if my dataset's classes are imbalanced?</h3>
-              <p>Compare the largest class to the smallest in your target column: an imbalance ratio much above 3:1 usually needs handling (resampling, class weights, or a metric other than plain accuracy). Paste a CSV into Researcher Arena's dataset corner for a real, in-browser count of rows, missing values, duplicates and class balance &mdash; nothing is uploaded anywhere.</p>
+              <p>Compare the largest class to the smallest in your target column: a majority-to-minority ratio beyond roughly 3&ndash;4:1 usually needs handling (resampling, class weights, or a metric other than plain accuracy). Upload a CSV in Researcher Arena's dataset corner for a real, in-browser count of rows, missing values, duplicates and class balance &mdash; nothing is uploaded anywhere.</p>
             </div>
             <div class="faq-item">
               <h3>What is the Researcher Arena?</h3>
@@ -453,7 +461,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             </div>
             <div class="faq-item">
               <h3>Does this tool store or share my information?</h3>
-              <p>No. Everything is saved only in this browser's local storage. Nothing is uploaded to a server, and the tool has no login or tracking.</p>
+              <p>Everything is saved only in this browser's local storage &mdash; there's no server, login or tracking, and nothing is uploaded. The one opt-in exception: when the page is opened inside Claude and you click an AI draft button, the text that draft needs (such as your profile summary) is sent to Claude to write it. On the public site, <em>Copy AI prompt</em> only copies text to your clipboard.</p>
             </div>
           </div>
         </div>
@@ -479,7 +487,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
         <div class="panel-head">
           <span class="eyebrow">My profile</span>
           <h2>Your research profile</h2>
-          <p class="panel-lede">Set your research interests, target degree and background once. The PhD supervisor search, proposal builder, outreach emails and CV tools all read from this profile automatically. Nothing here leaves this browser.</p>
+          <p class="panel-lede">Set your research interests, target degree and background once. The PhD supervisor search, proposal builder, outreach emails and CV tools all read from this profile automatically. Nothing here leaves this browser unless you choose to use an AI draft button inside Claude.</p>
         </div>
 
         <div class="card grid cols-2">
@@ -523,15 +531,15 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
 
         <div class="card stack">
           <div>
-            <label class="field-label">Target regions</label>
+            <label class="field-label" id="pRegionsLabel">Target regions</label>
             <p class="field-help" style="margin-bottom:8px;">Used to narrow faculty and job-board searches. Pick as many as apply.</p>
-            <div class="chip-row" id="pRegions" data-multiselect="regions"></div>
+            <div class="chip-row" id="pRegions" data-multiselect="regions" role="group" aria-labelledby="pRegionsLabel"></div>
           </div>
           <hr class="divider">
           <div>
-            <label class="field-label">Research interests</label>
+            <label class="field-label" id="pInterestsLabel">Research interests</label>
             <p class="field-help" style="margin-bottom:8px;">Pick every area that fits &mdash; searches combine all of your selections.</p>
-            <div class="chip-row" id="pInterests" data-multiselect="interests"></div>
+            <div class="chip-row" id="pInterests" data-multiselect="interests" role="group" aria-labelledby="pInterestsLabel"></div>
           </div>
         </div>
 
@@ -582,10 +590,10 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
         <div class="card stack">
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
-              <label class="field-label">Search these interests</label>
+              <label class="field-label" id="sInterestsLabel">Search these interests</label>
               <button type="button" class="btn ghost sm" id="sMatchBtn">Match my profile</button>
             </div>
-            <div class="chip-row" id="sInterests" data-multiselect="sInterests"></div>
+            <div class="chip-row" id="sInterests" data-multiselect="sInterests" role="group" aria-labelledby="sInterestsLabel"></div>
             <p class="field-help">Pick as many as apply — selecting more than one <em>broadens</em> the search (either topic matches), it never narrows to results tagged with all of them at once.</p>
           </div>
           <div class="grid cols-2">
@@ -685,11 +693,11 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
           </div>
           <div>
             <label class="field-label" for="oRecipientTitle">Recipient's title</label>
-            <input type="text" id="oRecipientTitle" placeholder="e.g. Associate Professor">
+            <input type="text" id="oRecipientTitle" placeholder="e.g. Associate Professor (blank = Dr)">
           </div>
           <div>
             <label class="field-label" for="oRecipientName">Recipient's name</label>
-            <input type="text" id="oRecipientName" placeholder="e.g. Dr Alex Chen">
+            <input type="text" id="oRecipientName" placeholder="e.g. Alex Chen">
           </div>
           <div>
             <label class="field-label" for="oRecipientFocus">Their research focus</label>
@@ -728,6 +736,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
         <div class="btn-row">
           <button class="btn primary" id="oGenerateBtn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="1.4"/><path d="M4.5 6.5 12 12.5l7.5-6"/></svg>Generate draft</button>
           <button class="btn ai" id="oPolishBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Polish tone with AI</button>
+          <button type="button" class="btn ai-fallback" id="oPolishCopyBtn" hidden title="AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant."><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy AI prompt</button>
         </div>
 
         <div class="ai-box" id="oAiBox">
@@ -741,6 +750,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
           <input type="text" id="oSubject">
           <label class="field-label" style="margin-top:12px;" for="oBody">Body</label>
           <textarea id="oBody" rows="14"></textarea>
+          <div class="wordcount" id="oWordCount" aria-live="polite" style="margin-top:6px;"></div>
           <div class="btn-row" style="margin-top:12px;">
             <button class="btn sm" id="oCopyBtn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy email</button>
             <button class="btn sm" id="oDownloadBtn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="M7.5 11.5 12 16l4.5-4.5"/><path d="M5 19.5h14"/></svg>Save as .txt</button>
@@ -772,9 +782,10 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             <h3 class="section-title">Bullet-point rewriter</h3>
             <p class="field-help">Paste one raw achievement or task and get three punchy resume-bullet variants back.</p>
           </div>
-          <textarea id="cvRaw" rows="3" placeholder="e.g. I was responsible for a group project benchmarking graph neural network methods for fraud detection on public datasets, and reproduced a recent ICLR paper from scratch."></textarea>
+          <textarea id="cvRaw" rows="3" aria-label="Raw achievement or task" placeholder="e.g. I was responsible for a group project benchmarking graph neural network methods for fraud detection on public datasets, and reproduced a recent ICLR paper from scratch."></textarea>
           <div class="btn-row">
             <button class="btn ai" id="cvRewriteBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Rewrite as bullets</button>
+            <button type="button" class="btn ai-fallback" id="cvRewriteCopyBtn" hidden title="AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant."><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy AI prompt</button>
           </div>
           <div id="cvBulletsOut" class="stack" style="gap:8px;"></div>
         </div>
@@ -808,7 +819,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             <h3 class="section-title">Draft your one-line summary</h3>
             <p class="field-help">Uses your saved profile &mdash; background, interests and stage &mdash; to draft the opening line readers see first. Edit it before publishing; treat it as a starting point, not a final line.</p>
           </div>
-          <div class="btn-row"><button class="btn ai" id="pfSummaryBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Draft with AI</button></div>
+          <div class="btn-row"><button class="btn ai" id="pfSummaryBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Draft with AI</button><button type="button" class="btn ai-fallback" id="pfSummaryCopyBtn" hidden title="AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant."><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy AI prompt</button></div>
           <div class="ai-box" id="pfAiBox">
             <div class="ai-box-head"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>AI DRAFT</div>
             <div class="ai-out" id="pfAiOut"></div>
@@ -836,10 +847,10 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
         <div class="card stack">
           <div>
             <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
-              <label class="field-label">Search these interests</label>
+              <label class="field-label" id="rInterestsLabel">Search these interests</label>
               <button type="button" class="btn ghost sm" id="rMatchBtn">Match my profile</button>
             </div>
-            <div class="chip-row" id="rInterests" data-multiselect="rInterests"></div>
+            <div class="chip-row" id="rInterests" data-multiselect="rInterests" role="group" aria-labelledby="rInterestsLabel"></div>
             <p class="field-help">Selecting more than one interest broadens the search (either topic matches) rather than requiring every topic in one result.</p>
           </div>
           <div>
@@ -858,8 +869,8 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             <h3 class="section-title">Suggest frameworks &amp; tools for a topic</h3>
             <p class="field-help">Describe your topic and get back real, well-known tool and dataset names to look into &mdash; every result links to a search, never a guessed URL.</p>
           </div>
-          <textarea id="fwTopic" rows="2" placeholder="e.g. benchmarking GNN-based fraud detection under class imbalance"></textarea>
-          <div class="btn-row"><button class="btn ai" id="fwSuggestBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Suggest frameworks</button></div>
+          <textarea id="fwTopic" rows="2" aria-label="Topic to suggest frameworks for" placeholder="e.g. benchmarking GNN-based fraud detection under class imbalance"></textarea>
+          <div class="btn-row"><button class="btn ai" id="fwSuggestBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Suggest frameworks</button><button type="button" class="btn ai-fallback" id="fwSuggestCopyBtn" hidden title="AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant."><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy AI prompt</button></div>
           <div class="chip-row" id="fwOut"></div>
         </div>
 
@@ -882,8 +893,8 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
             <h3 class="section-title">Suggest search keywords &amp; venue type</h3>
             <p class="field-help">Paste a title or abstract. This suggests search terms and general venue types &mdash; never specific journal names &mdash; so you always verify real matches with the tools below.</p>
           </div>
-          <textarea id="jAbstract" rows="4" placeholder="Paste your title and/or abstract here&hellip;"></textarea>
-          <div class="btn-row"><button class="btn ai" id="jSuggestBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Suggest keywords &amp; venue type</button></div>
+          <textarea id="jAbstract" rows="4" aria-label="Title or abstract" placeholder="Paste your title and/or abstract here&hellip;"></textarea>
+          <div class="btn-row"><button class="btn ai" id="jSuggestBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Suggest keywords &amp; venue type</button><button type="button" class="btn ai-fallback" id="jSuggestCopyBtn" hidden title="AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant."><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="11" height="12" rx="1.2"/><path d="M15.5 8V6a1.2 1.2 0 0 0-1.2-1.2H6A1.2 1.2 0 0 0 4.8 6v10A1.2 1.2 0 0 0 6 17.2h2"/></svg>Copy AI prompt</button></div>
           <div id="jOut" class="stack" style="gap:10px;"></div>
         </div>
 
@@ -939,6 +950,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
           <div class="btn-row">
             <button class="btn" id="tlIcsBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="1.4"/><line x1="3.5" y1="9.5" x2="20.5" y2="9.5"/><line x1="8" y1="3.2" x2="8" y2="6.8"/><line x1="16" y1="3.2" x2="16" y2="6.8"/></svg>Export stages to calendar (.ics)</button>
           </div>
+          <p class="warn-note" id="tlDateNote" style="grid-column:1 / -1;" hidden></p>
           <p class="field-help" style="grid-column:1 / -1;">Downloads one reminder per stage, timed backward from your date above &mdash; a personal planning nudge, not an official deadline. Import the file into Google Calendar, Apple Calendar or Outlook.</p>
         </div>
 
@@ -955,7 +967,7 @@ table.compute-table td{padding:8px 10px; border-bottom:1px solid var(--line);}
 
         <div class="card">
           <div class="filter-row">
-            <input type="search" id="libSearch" placeholder="Search resources&hellip; e.g. citation, journal, portfolio" style="flex:1; min-width:220px;">
+            <input type="search" id="libSearch" aria-label="Search resources" placeholder="Search resources&hellip; e.g. citation, journal, portfolio" style="flex:1; min-width:220px;">
           </div>
           <div class="tab-row" id="libTabs" style="margin-top:12px;"></div>
         </div>
@@ -1036,7 +1048,7 @@ const RESOURCES = [
   {id:'unpaywall', name:'Unpaywall', url:'https://unpaywall.org/', cat:'papers', desc:'Finds a free, legal full-text version of a paywalled paper from its DOI or title.'},
   {id:'ssrn', name:'SSRN', url:'https://www.ssrn.com/', cat:'papers', desc:"arXiv's counterpart outside STEM — the main preprint repository for economics, law and the social sciences."},
   {id:'elsevierjf', name:'Elsevier Journal Finder', url:'https://journalfinder.elsevier.com/', cat:'journals', desc:'Paste a title and abstract to get matching Elsevier journals.'},
-  {id:'springerjs', name:'Springer Journal Suggester', url:'https://link.springer.com/journals', cat:'journals', desc:'The same idea, matched against the Springer Nature portfolio.'},
+  {id:'springerjs', name:'Springer Journal Suggester', url:'https://journalsuggester.springer.com/', cat:'journals', desc:'Paste a title and abstract to get matching journals from the Springer Nature portfolio.'},
   {id:'jane', name:'Jane (Journal/Author Estimator)', url:'https://jane.biosemantics.org/', cat:'journals', desc:'Paste an abstract to find matching journals or authors &mdash; strong for biomedical topics.'},
   {id:'tcs', name:'Think. Check. Submit.', url:'https://thinkchecksubmit.org/', cat:'journals', desc:'A short checklist for verifying a journal is legitimate before you submit.'},
   {id:'doaj', name:'DOAJ', url:'https://doaj.org/', cat:'journals', desc:'Directory of vetted, fully open-access journals.'},
@@ -1055,7 +1067,7 @@ const RESOURCES = [
   {id:'tensorflow', name:'TensorFlow', url:'https://www.tensorflow.org/', cat:'frameworks', desc:'Google\'s ML framework, with strong production and deployment tooling.'},
   {id:'sklearn', name:'scikit-learn', url:'https://scikit-learn.org/', cat:'frameworks', desc:'Classical ML in Python &mdash; regression, clustering, evaluation.'},
   {id:'huggingface', name:'Hugging Face', url:'https://huggingface.co/', cat:'frameworks', desc:'Model hub and libraries for NLP, vision and multimodal work.'},
-  {id:'paperswithcode', name:'Papers With Code', url:'https://paperswithcode.com/', cat:'frameworks', desc:"Papers linked to their official code and benchmark leaderboards — now hosted as part of Hugging Face's Papers hub."},
+  {id:'paperswithcode', name:'Hugging Face Papers (formerly Papers With Code)', url:'https://huggingface.co/papers', cat:'frameworks', desc:'Papers With Code was retired in 2025; its trending-papers feed, with linked code and models, now lives on Hugging Face Papers.'},
   {id:'kaggle', name:'Kaggle', url:'https://www.kaggle.com/', cat:'frameworks', desc:'Datasets, notebooks and competitions for hands-on practice.'},
   {id:'prisma', name:'PRISMA', url:'https://www.prisma-statement.org/', cat:'frameworks', desc:'Reporting standard and flow diagram for systematic reviews.'},
   {id:'kaggle-datasets', name:'Kaggle Datasets', url:'https://www.kaggle.com/datasets', cat:'datasets', desc:'The largest general-purpose dataset hub, with notebooks and discussion attached to most datasets.'},
@@ -1093,13 +1105,13 @@ const RESOURCES = [
   {id:'osf', name:'OSF (Open Science Framework)', url:'https://osf.io/', cat:'datasets', desc:'Free project hub for preregistration, data and materials sharing across disciplines.'},
   {id:'datagov', name:'Data.gov', url:'https://data.gov/', cat:'datasets', desc:'The US federal government\'s open-data portal &mdash; strong for public-sector and civic datasets.'},
   {id:'lambda', name:'Lambda', url:'https://lambda.ai/', cat:'compute', desc:'On-demand and reserved GPU cloud built specifically for ML training.'},
-  {id:'wandb', name:'Weights &amp; Biases', url:'https://wandb.ai/', cat:'frameworks', desc:'Experiment tracking, dataset/model versioning and collaborative dashboards for ML training runs.'}
+  {id:'wandb', name:'Weights & Biases', url:'https://wandb.ai/', cat:'frameworks', desc:'Experiment tracking, dataset/model versioning and collaborative dashboards for ML training runs.'}
 ];
 
 const CATEGORY_LABELS = {
   listings:'PhD & job listings', networks:'People & networks', papers:'Literature discovery',
   journals:'Journals & publishing', conferences:'Conferences & venues', writing:'Reference & writing', cv:'CV & résumé',
-  portfolio:'Portfolio building', frameworks:'Frameworks & datasets',
+  portfolio:'Portfolio building', frameworks:'Frameworks & tools',
   datasets:'Dataset hubs', compute:'Compute & GPU providers', code:'Code & model hubs', statistics:'Statistics tools'
 };
 
@@ -1174,22 +1186,53 @@ let state = defaultState();
 function loadState(){
   try{
     const raw = localStorage.getItem(STORE_KEY);
-    if(raw){
-      const parsed = JSON.parse(raw);
-      state = Object.assign(defaultState(), parsed, {
-        profile: Object.assign(defaultState().profile, parsed.profile || {}),
-        sSel: Object.assign(defaultState().sSel, parsed.sSel || {}),
-        rSel: Object.assign(defaultState().rSel, parsed.rSel || {}),
-        proposal: parsed.proposal || {},
-        outreach: Object.assign(defaultState().outreach, parsed.outreach || {}),
-        checklist: parsed.checklist || {},
-        arena: Object.assign(defaultState().arena, parsed.arena || {})
-      });
-    }
+    state = raw ? sanitizeState(JSON.parse(raw)) : defaultState();
   }catch(e){ /* localStorage unavailable or corrupt — start fresh */ state = defaultState(); }
 }
+/** Coerce anything read from storage or an imported file into the exact shape the UI expects. Every panel
+ *  calls .map/.includes/.trim on these fields, so a wrong type (a string where an array belongs, a number
+ *  where a string belongs) used to crash whole panels; unknown ids are dropped rather than rendered. */
+function sanitizeState(raw){
+  const d = defaultState();
+  const obj = v => (v && typeof v === 'object' && !Array.isArray(v)) ? v : {};
+  const str = v => typeof v === 'string' ? v : ((v === null || v === undefined || typeof v === 'object') ? '' : String(v));
+  const ids = (v, allowed) => Array.isArray(v) ? Array.from(new Set(v.filter(x => typeof x === 'string' && allowed.indexOf(x) > -1))) : [];
+  const interestIds = INTERESTS.map(i => i.id), regionIds = REGIONS.map(r => r.id);
+  const src = obj(raw);
+  const p = obj(src.profile);
+  const oneOf = (v, allowed) => allowed.indexOf(v) > -1 ? v : '';
+  d.profile = { name:str(p.name), stage:oneOf(str(p.stage), Object.keys(STAGE_PHRASES)), degree:oneOf(str(p.degree), Object.keys(DEGREE_INFO)), start:oneOf(str(p.start), Object.keys(START_PHRASES)),
+    regions:ids(p.regions, regionIds), interests:ids(p.interests, interestIds),
+    keywords:str(p.keywords), skills:str(p.skills), bio:str(p.bio), links:str(p.links), email:str(p.email) };
+  const ss = obj(src.sSel);
+  d.sSel = { interests:ids(ss.interests, interestIds), region: regionIds.indexOf(ss.region) > -1 ? ss.region : 'au', keyword:str(ss.keyword) };
+  const rs = obj(src.rSel);
+  d.rSel = { interests:ids(rs.interests, interestIds), keyword:str(rs.keyword) };
+  const pr = obj(src.proposal);
+  PROPOSAL_SECTIONS.forEach(s => { if(typeof pr[s.key] === 'string') d.proposal[s.key] = pr[s.key]; });
+  const o = obj(src.outreach);
+  Object.keys(o).forEach(k => { if(typeof o[k] === 'string') d.outreach[k] = o[k]; });
+  if(['cold','followup','thanks','inquiry'].indexOf(d.outreach.type) === -1) d.outreach.type = 'cold';
+  const cl = obj(src.checklist);
+  Object.keys(cl).forEach(k => { if(cl[k]) d.checklist[k] = true; });
+  d.timelineTargetDate = /^\d{4}-\d{2}-\d{2}$/.test(str(src.timelineTargetDate)) ? src.timelineTargetDate : '';
+  const a = obj(src.arena);
+  d.arena.tool = ARENA_TOOLS.some(t => t.id === a.tool) ? a.tool : 'scholar';
+  d.arena.gapText = str(a.gapText);
+  d.arena.litRows = Array.isArray(a.litRows) ? a.litRows.filter(r => r && typeof r === 'object').map(r => {
+    const row = newMatrixRow(); MATRIX_COLS.forEach(c => { row[c.key] = str(r[c.key]); }); return row; }) : [];
+  const rp = obj(a.repro);
+  REPRO_ITEMS.forEach(i => { if(rp[i.id]) d.arena.repro[i.id] = true; });
+  return d;
+}
+let storageWarned = false;
+/** Returns false (and warns once) when the browser refuses storage — private mode, blocked site data, or full. */
 function saveState(){
-  try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); }catch(e){ /* best-effort only */ }
+  try{ localStorage.setItem(STORE_KEY, JSON.stringify(state)); return true; }
+  catch(e){
+    if(!storageWarned){ storageWarned = true; try{ showToast('This browser isn\'t letting the page save (private mode, blocked or full storage) — use Export data to keep a copy'); }catch(_){} }
+    return false;
+  }
 }
 
 /* ============================================================
@@ -1210,6 +1253,9 @@ function el(tag, attrs, children){
   return node;
 }
 function qs(str){ return encodeURIComponent(String(str||'').trim()); }
+function escapeHtml(s){ return String(s === null || s === undefined ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function countWords(t){ t = String(t||'').trim(); return t ? t.split(/\s+/).length : 0; }
+function fmtBytes(n){ if(n < 1024) return n + ' bytes'; if(n < 1048576) return (Math.round(n/102.4)/10) + ' KB'; return (Math.round(n/104857.6)/10) + ' MB'; }
 
 /* ---- typo-tolerant text matching (Resource Library search) ---- */
 function levenshtein(a, b){
@@ -1242,7 +1288,7 @@ function splitWords(str){
 function wordsFuzzyMatch(hw, nw){
   if(hw === nw) return true;
   if(hw.length < 3 || nw.length < 3) return false; // short tokens ("a", "in", "to") never fuzz — pure noise
-  if(hw.includes(nw) || nw.includes(hw)) return true;
+  if(hw.includes(nw) || (hw.length >= 5 && nw.includes(hw))) return true;
   const maxLen = Math.max(hw.length, nw.length);
   const lenDiff = Math.abs(hw.length - nw.length);
   const tolerance = maxLen <= 5 ? 1 : (maxLen <= 9 ? 2 : 3);
@@ -1285,30 +1331,83 @@ function showToast(msg){
   clearTimeout(toastTimer);
   toastTimer = setTimeout(()=> t.classList.remove('show'), 2600);
 }
-
-async function copyText(text, label){
-  try{
-    await navigator.clipboard.writeText(text);
-    showToast((label||'Text') + ' copied to clipboard');
-  }catch(e){
-    showToast('Could not copy automatically — select and copy manually');
-  }
+/** In-page confirmation. window.confirm() is unusable inside Claude's artifact viewer (it returns false without
+ *  showing anything), which silently blocked Reset profile, Import over existing data and draft replacement there. */
+function confirmAction(message, okLabel){
+  return new Promise(resolve => {
+    const prevFocus = document.activeElement;
+    const overlay = el('div',{class:'confirm-overlay'});
+    const box = el('div',{class:'confirm-box', role:'alertdialog', 'aria-modal':'true', 'aria-labelledby':'confirmMsg'});
+    box.appendChild(el('p',{id:'confirmMsg', text:message}));
+    const cancel = el('button',{type:'button', class:'btn', id:'confirmCancel', text:'Cancel'});
+    const ok = el('button',{type:'button', class:'btn primary', id:'confirmOk', text:okLabel || 'Continue'});
+    box.appendChild(el('div',{class:'btn-row confirm-actions'},[cancel, ok]));
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+    const onKey = e => {
+      if(e.key === 'Escape'){ e.preventDefault(); done(false); }
+      else if(e.key === 'Tab'){ e.preventDefault(); (document.activeElement === ok ? cancel : ok).focus(); }
+    };
+    function done(v){
+      document.removeEventListener('keydown', onKey, true);
+      overlay.remove();
+      if(prevFocus && prevFocus.focus) try{ prevFocus.focus(); }catch(e){}
+      resolve(v);
+    }
+    document.addEventListener('keydown', onKey, true);
+    cancel.addEventListener('click', ()=> done(false));
+    ok.addEventListener('click', ()=> done(true));
+    overlay.addEventListener('click', e => { if(e.target === overlay) done(false); });
+    ok.focus();
+  });
 }
 
-async function saveOrCopy(filename, text, label){
+/** Clipboard write with a legacy fallback: navigator.clipboard is unavailable on non-secure origins and can be
+ *  blocked by an embedding iframe's permissions policy, so fall back to a hidden-textarea execCommand copy. */
+async function copyText(text, label, successMsg){
+  let ok = false;
+  try{
+    if(navigator.clipboard && window.isSecureContext){ await navigator.clipboard.writeText(text); ok = true; }
+  }catch(e){ ok = false; }
+  if(!ok){
+    const prevFocus = document.activeElement;
+    try{
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.top = '-1000px'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+    }catch(e){ ok = false; }
+    if(prevFocus && prevFocus.focus) try{ prevFocus.focus(); }catch(e){}
+  }
+  showToast(ok ? (successMsg || ((label||'Text') + ' copied to clipboard')) : 'Could not copy automatically — select and copy manually');
+  return ok;
+}
+
+/** Save a real file. Inside Claude the downloads capability handles it (the artifact sandbox blocks plain
+ *  <a download>); everywhere else — including the public GitHub Pages copy — it is a normal browser download.
+ *  (Previously the non-Claude path silently copied to the clipboard instead, so "Export" never produced a file.) */
+async function saveFile(filename, text, mime, successMsg){
   const dl = await getDownloads();
   if(dl){
     try{
       const res = await dl.save({filename, data:text});
-      if(res.status === 'saved') showToast('Saved ' + filename);
-      else showToast('Sent to your chosen destination');
-      return;
+      showToast(res && res.status === 'saved' ? (successMsg || ('Saved ' + filename)) : 'Sent to your chosen destination');
+      return true;
     }catch(e){
-      if(e && e.code === 'declined') return;
-      // fall through to clipboard fallback for any other failure
+      if(e && e.code === 'declined') return false;
+      // any other failure: fall through to a plain browser download
     }
   }
-  await copyText(text, label || filename);
+  try{
+    downloadBlob(filename, text, mime || 'text/plain;charset=utf-8');
+    showToast(successMsg || ('Downloaded ' + filename));
+    return true;
+  }catch(e){
+    await copyText(text, filename);
+    return false;
+  }
 }
 
 /* ---- link builders (all URLs are code-constructed, never AI-supplied) ---- */
@@ -1320,12 +1419,13 @@ function pubmedUrl(q){ return 'https://pubmed.ncbi.nlm.nih.gov/?term=' + qs(q); 
 function coreUrl(q){ return 'https://core.ac.uk/search?q=' + qs(q); }
 function orcidUrl(q){ return 'https://orcid.org/orcid-search/search?searchQuery=' + qs(q); }
 function linkedinPeopleUrl(q){ return 'https://www.linkedin.com/search/results/people/?keywords=' + qs(q + ' professor'); }
+function openAlexUrl(entity, q){ return 'https://openalex.org/' + entity + '?page=1&filter=' + encodeURIComponent('default.search:' + String(q||'').trim()); }
 function researchgateUrl(q){ return 'https://www.google.com/search?q=' + qs(q + ' researcher site:researchgate.net'); }
 function googleSiteUrl(q, site){ const parts=[q]; if(site) parts.push(site); return 'https://www.google.com/search?q=' + qs(parts.join(' ')); }
 
 function currentQuery(interestIds, extraKeyword){
   const group = phraseOrGroup(interestIds);
-  return [group, (extraKeyword||'').trim()].filter(Boolean).join(' ') || 'research topic';
+  return [group, (extraKeyword||'').trim()].filter(Boolean).join(' ');
 }
 /** Safer query for narrow profile-field matchers (Google Scholar author search, ORCID) that don't reliably
  *  parse boolean OR/quotes the way full-text search engines do — lead with the single strongest term instead
@@ -1342,25 +1442,41 @@ function primaryQuery(interestIds, extraKeyword){
    save or send the exported file yourself.
    ============================================================ */
 
+const APP_ID = 'postgraduate-research-planner';
+const STATE_KEYS = ['profile','sSel','rSel','proposal','outreach','checklist','timelineTargetDate','arena'];
 function exportData(){
-  const payload = { app:'postgraduate-research-planner', exportedAt: new Date().toISOString(), state };
+  flushProfileAutosave();
+  const payload = { app:APP_ID, version:3, exportedAt: new Date().toISOString(), state };
   const stamp = new Date().toISOString().slice(0,10);
-  downloadBlob('research-planner-data-' + stamp + '.json', JSON.stringify(payload, null, 2), 'application/json');
-  showToast('Data exported — open that file on your other device and use Import data');
+  saveFile('research-planner-data-' + stamp + '.json', JSON.stringify(payload, null, 2), 'application/json',
+    'Data exported — open that file on your other device and use Import data');
 }
+/** True if a browser holds anything the user typed — used to decide whether an import must ask before
+ *  overwriting. Covers every saved area (it used to miss Researcher Arena, the timeline date and most profile
+ *  fields, so an import could silently replace a literature matrix or gap list). */
 function stateHasRealData(s){
-  if(!s) return false;
+  if(!s || typeof s !== 'object') return false;
+  const filled = v => typeof v === 'string' ? v.trim() !== '' : (Array.isArray(v) ? v.length > 0 : !!v);
   const p = s.profile || {};
-  return !!(
-    (p.name && p.name.trim()) || (p.bio && p.bio.trim()) ||
-    (p.interests && p.interests.length) || (p.regions && p.regions.length) ||
-    (s.proposal && Object.values(s.proposal).some(v => v && String(v).trim())) ||
-    (s.outreach && ((s.outreach.subject && s.outreach.subject.trim()) || (s.outreach.body && s.outreach.body.trim()))) ||
-    (s.checklist && Object.values(s.checklist).some(Boolean))
-  );
+  if(Object.keys(p).some(k => filled(p[k]))) return true;
+  if(s.proposal && Object.values(s.proposal).some(filled)) return true;
+  const o = s.outreach || {};
+  if(['title','name','focus','connection','hook','ask','subject','body'].some(k => filled(o[k]))) return true;
+  if(s.checklist && Object.values(s.checklist).some(Boolean)) return true;
+  if(filled(s.timelineTargetDate)) return true;
+  if(s.sSel && filled(s.sSel.keyword)) return true;
+  if(s.rSel && filled(s.rSel.keyword)) return true;
+  const a = s.arena || {};
+  if(filled(a.gapText)) return true;
+  if(Array.isArray(a.litRows) && a.litRows.some(r => r && Object.values(r).some(filled))) return true;
+  if(a.repro && Object.values(a.repro).some(Boolean)) return true;
+  return false;
+}
+function looksLikePlannerState(o){
+  return !!o && typeof o === 'object' && !Array.isArray(o) && STATE_KEYS.some(k => Object.prototype.hasOwnProperty.call(o, k));
 }
 function applyImportedState(importedState){
-  state = Object.assign(defaultState(), importedState || {});
+  state = sanitizeState(importedState);
   saveState();
   location.reload(); // simplest correct way to re-render every panel with the new state
 }
@@ -1370,11 +1486,15 @@ function handleImportFile(file){
     let parsed;
     try{ parsed = JSON.parse(reader.result); }
     catch(e){ showToast("That file doesn't look like valid exported data"); return; }
-    const importedState = (parsed && typeof parsed === 'object' && parsed.state) ? parsed.state : parsed;
-    if(!importedState || typeof importedState !== 'object'){ showToast("That file doesn't look like valid exported data"); return; }
+    const notOurs = "That file doesn't look like planner data exported from this tool — nothing was changed";
+    if(!parsed || typeof parsed !== 'object' || Array.isArray(parsed)){ showToast(notOurs); return; }
+    if(parsed.app && parsed.app !== APP_ID){ showToast(notOurs); return; }
+    const importedState = (parsed.state && typeof parsed.state === 'object') ? parsed.state : parsed;
+    if(!looksLikePlannerState(importedState)){ showToast(notOurs); return; }
     if(stateHasRealData(state)){
-      const ok = confirm('This browser already has planner data saved. Importing will replace it with the data from that file. Continue?');
-      if(!ok) return;
+      confirmAction('This browser already has planner data saved. Importing will replace it with the data from that file.', 'Replace my data')
+        .then(ok => { if(ok) applyImportedState(importedState); });
+      return;
     }
     applyImportedState(importedState);
   };
@@ -1402,15 +1522,34 @@ async function getDownloads(){
   return downloadsApi;
 }
 
+const aiState = { checked:false, available:false };
+const AI_FALLBACK_TITLE = 'AI drafting runs when this page is opened inside Claude. Here, copy the same guard-railed prompt and paste it into any AI assistant.';
+/** Inside Claude: show the spark (AI) buttons. Anywhere else (the public site, a local file): show
+ *  "Copy AI prompt" in the same spot, so every AI-assisted tool still does something useful instead of
+ *  leaving a textarea with no button under it. Both stay hidden until the capability check resolves. */
 function revealAiButtons(){
-  if(!capReady.sample) return; // stay hidden until the capability actually resolves
-  $all('.btn.ai').forEach(b => b.hidden = false);
+  if(!aiState.checked) return;
+  $all('.btn.ai').forEach(b => b.hidden = !aiState.available);
+  $all('.ai-fallback').forEach(b => b.hidden = aiState.available);
 }
 
 async function initCapabilities(){
-  const s = await getSample();
-  if(s){ capReady.sample = true; revealAiButtons(); }
+  let s = null;
+  try{ s = await getSample(); }catch(e){ s = null; }
+  aiState.available = !!s; aiState.checked = true; capReady.sample = !!s;
+  revealAiButtons();
   await getDownloads(); // downloads has its own per-call fallback, nothing to reveal
+}
+function copyAiPrompt(prompt){
+  if(!prompt) return;
+  copyText(prompt, 'AI prompt', 'Prompt copied — paste it into Claude or any AI assistant, then review the result before using it');
+}
+function aiFallbackButton(extraClass, onClick, id){
+  const attrs = {type:'button', class:'btn ai-fallback' + (extraClass ? ' ' + extraClass : ''), hidden:'true', title:AI_FALLBACK_TITLE, html: svgIcon('copy') + '<span>Copy AI prompt</span>'};
+  if(id) attrs.id = id;
+  const b = el('button', attrs);
+  b.addEventListener('click', onClick);
+  return b;
 }
 
 function sampleErrorCopy(code){
@@ -1443,7 +1582,9 @@ async function runAi(btn, boxEl, outEl, promptText, opts){
     return text;
   }catch(e){
     const msg = sampleErrorCopy(e && e.code);
-    if(msg) outEl.textContent = (e && e.text) ? e.text : '';
+    const partial = (e && e.text) ? String(e.text) : '';
+    outEl.textContent = partial;
+    if(!partial) boxEl.classList.remove('show'); // an empty box's "Use" button would replace your text with nothing
     if(msg) showToast(msg);
     return null;
   }finally{
@@ -1511,7 +1652,7 @@ const PANELS = [
   {id:'portfolio', label:'Portfolio', icon:'layout', desc:'Format guide and site-builder links.'},
   {id:'journals', label:'Journals & publishing', icon:'bookmark', desc:'Journal finders, citation tools and a style guide.'},
   {id:'timeline', label:'Timeline & checklist', icon:'calendar', desc:'A 12-month runway with saved progress.'},
-  {id:'library', label:'Resource library', icon:'library', desc:'Every tool in this desk, searchable.'}
+  {id:'library', label:'Resource library', icon:'library', desc:'Every tool in this planner, searchable.'}
 ];
 
 /* ============================================================
@@ -1557,7 +1698,7 @@ function monogramColor(str){
   let hash = 0;
   const s = String(str||'');
   for(let i=0;i<s.length;i++){ hash = (hash*31 + s.charCodeAt(i)) >>> 0; }
-  return 'hsl(' + (hash % 360) + ' 58% 40%)';
+  return 'hsl(' + (hash % 360) + ' 58% 30%)';
 }
 
 function makeResourceCard(opts){
@@ -1569,10 +1710,10 @@ function makeResourceCard(opts){
   card.appendChild(el('h4',{text:opts.title}));
   card.appendChild(el('p',{html:opts.desc}));
   const linksWrap = el('div',{class:'resource-links'});
-  const a1 = el('a',{href:opts.primaryUrl, target:'_blank', rel:'noopener', html: (opts.primaryLabel||'Open') + ' ' + svgIcon('external')});
+  const a1 = el('a',{href:opts.primaryUrl, target:'_blank', rel:'noopener', html: escapeHtml(opts.primaryLabel||'Open') + ' ' + svgIcon('external')});
   linksWrap.appendChild(a1);
   if(opts.secondaryUrl){
-    const a2 = el('a',{href:opts.secondaryUrl, target:'_blank', rel:'noopener', html: (opts.secondaryLabel||'Search') + ' ' + svgIcon('external')});
+    const a2 = el('a',{href:opts.secondaryUrl, target:'_blank', rel:'noopener', html: escapeHtml(opts.secondaryLabel||'Search') + ' ' + svgIcon('external')});
     linksWrap.appendChild(a2);
   }
   card.appendChild(linksWrap);
@@ -1634,12 +1775,23 @@ function fillProfileInputs(){
 }
 function renderRegionChips(){
   mountChipGroup($('#pRegions'), REGIONS, ()=>state.profile.regions, (id)=>{
-    toggleInArray(state.profile.regions, id); saveState(); renderRegionChips();
+    const firstBefore = state.profile.regions[0];
+    toggleInArray(state.profile.regions, id);
+    // Supervisor search follows the profile's first region until you pick a different one there.
+    if(state.profile.regions.length && (!firstBefore || state.sSel.region === firstBefore)) state.sSel.region = state.profile.regions[0];
+    saveState(); renderRegionChips();
   });
 }
 function renderProfileInterestChips(){
   mountChipGroup($('#pInterests'), INTERESTS, ()=>state.profile.interests, (id)=>{
-    toggleInArray(state.profile.interests, id); saveState(); renderProfileInterestChips();
+    const before = state.profile.interests.slice();
+    toggleInArray(state.profile.interests, id);
+    // "Every other section reads from your profile": Supervisors and Papers mirror profile interests for as long
+    // as their own selection still matches the profile (or is empty) — customise them there and they stop following.
+    const follows = sel => sel.length === 0 || (sel.length === before.length && sel.every(x => before.indexOf(x) > -1));
+    if(follows(state.sSel.interests)) state.sSel.interests = state.profile.interests.slice();
+    if(follows(state.rSel.interests)) state.rSel.interests = state.profile.interests.slice();
+    saveState(); renderProfileInterestChips();
   });
 }
 function renderProfilePanel(){
@@ -1647,16 +1799,30 @@ function renderProfilePanel(){
   renderRegionChips();
   renderProfileInterestChips();
 }
-function saveProfileForm(){
+let profileAutosaveTimer = null;
+function scheduleProfileAutosave(){
+  clearTimeout(profileAutosaveTimer);
+  profileAutosaveTimer = setTimeout(()=>{ profileAutosaveTimer = null; saveProfileForm({silent:true}); }, 350);
+}
+/** Commit a pending autosave right now (before navigating away or exporting) so nothing typed is lost. */
+function flushProfileAutosave(){
+  if(profileAutosaveTimer){ clearTimeout(profileAutosaveTimer); profileAutosaveTimer = null; saveProfileForm({silent:true}); }
+}
+function saveProfileForm(opts){
+  const silent = !!(opts && opts.silent);
   const p = state.profile;
   p.name = $('#pName').value.trim(); p.stage = $('#pStage').value; p.degree = $('#pDegree').value;
   p.start = $('#pStart').value; p.keywords = $('#pKeywords').value.trim(); p.skills = $('#pSkills').value.trim();
   p.bio = $('#pBio').value.trim(); p.links = $('#pLinks').value.trim(); p.email = $('#pEmail').value.trim();
-  saveState();
+  const stored = saveState();
   syncDerivedInterests(false);
-  $('#pSavedNote').textContent = 'Saved just now';
-  showToast('Profile saved');
-  renderDashboard();
+  $('#pSavedNote').textContent = !stored ? 'Not saved — this browser is blocking storage; use Export data' : (silent ? 'Saved automatically' : 'Saved just now');
+  if(!silent){
+    const em = $('#pEmail');
+    if(p.email && em && typeof em.checkValidity === 'function' && !em.checkValidity()) showToast('Profile saved — but that email address doesn\'t look valid');
+    else showToast('Profile saved');
+    renderDashboard();
+  }
 }
 function syncDerivedInterests(force){
   if(force || state.sSel.interests.length===0){
@@ -1698,46 +1864,56 @@ function renderSupervisorLinks(){
   const region = REGIONS.find(r=>r.id===state.sSel.region) || REGIONS[0];
   const ids = state.sSel.interests;
   const terms = interestTerms(ids);
-  const query = currentQuery(ids, state.sSel.keyword);
-  const authorQuery = primaryQuery(ids, state.sSel.keyword) || query;
-  $('#sQueryPreview').textContent = 'Searching: ' + query + (region.site ? '  ·  ' + region.site : '');
+  const kw = (state.sSel.keyword||'').trim();
+  const query = currentQuery(ids, kw);
+  const authorQuery = primaryQuery(ids, kw) || query;
+  const authorGrid = $('#sAuthorLinks'), netGrid = $('#sNetworkLinks'), facGrid = $('#sFacultyLinks');
+  [authorGrid, netGrid, facGrid].forEach(g => { g.innerHTML = ''; });
 
-  const authorGrid = $('#sAuthorLinks'); authorGrid.innerHTML = '';
-  const multiNote = terms.length > 1 ? ' Profile-search boxes like this one match one field at a time, so it opens narrowed to "' + terms[0] + '" — use the second link, or the paper search below, for the rest of your selection.' : '';
-  authorGrid.appendChild(makeResourceCard({
-    title:'Google Scholar — author search',
-    desc:'Find researcher profiles matching your interests, ranked by citations.' + multiNote,
-    primaryUrl:scholarAuthorUrl(authorQuery),
-    secondaryUrl: terms.length > 1 ? scholarAuthorUrl([terms[1], (state.sSel.keyword||'').trim()].filter(Boolean).join(' ')) : null,
-    secondaryLabel: terms.length > 1 ? 'Try "' + terms[1] + '"' : null
-  }));
-  authorGrid.appendChild(makeResourceCard({title:'Google Scholar — paper search', desc:'See who is actively publishing on this exact combination of topics.', primaryUrl:scholarSearchUrl(query)}));
-  authorGrid.appendChild(makeResourceCard({
-    title:'ORCID',
-    desc:'Cross-check a name against their verified, ID-linked publication record.' + multiNote,
-    primaryUrl:orcidUrl(authorQuery),
-    secondaryUrl: terms.length > 1 ? orcidUrl([terms[1], (state.sSel.keyword||'').trim()].filter(Boolean).join(' ')) : null,
-    secondaryLabel: terms.length > 1 ? 'Try "' + terms[1] + '"' : null
-  }));
+  if(!query){
+    // Empty state: never build searches for a placeholder phrase — say what to do instead.
+    $('#sQueryPreview').textContent = 'Pick at least one interest or type a keyword above — the search links below build from your choices.';
+    [authorGrid, netGrid, facGrid].forEach(g => g.appendChild(el('p',{class:'field-help', style:'grid-column:1 / -1;', text:'Choose an interest or add a keyword above to build these searches.'})));
+  } else {
+    $('#sQueryPreview').textContent = 'Searching: ' + query + (region.site ? '  ·  ' + region.site : '');
+    const second = terms.length > 1 ? [terms[1], kw].filter(Boolean).join(' ') : '';
+    const multiNote = terms.length > 1 ? ' Profile-search boxes like this one match one field at a time, so it opens narrowed to "' + terms[0] + '" — use the second link, or the paper search below, for the rest of your selection.' : '';
+    authorGrid.appendChild(makeResourceCard({
+      title:'Google Scholar — author search',
+      desc:'Find researcher profiles matching your interests, ranked by citations.' + multiNote,
+      primaryUrl:scholarAuthorUrl(authorQuery),
+      secondaryUrl: second ? scholarAuthorUrl(second) : null,
+      secondaryLabel: second ? 'Try "' + terms[1] + '"' : null
+    }));
+    authorGrid.appendChild(makeResourceCard({title:'Google Scholar — paper search', desc:'See who is actively publishing on this exact combination of topics.', primaryUrl:scholarSearchUrl(query)}));
+    authorGrid.appendChild(makeResourceCard({
+      title:'ORCID',
+      desc:'Cross-check a name against their verified, ID-linked publication record.' + multiNote,
+      primaryUrl:orcidUrl(authorQuery),
+      secondaryUrl: second ? orcidUrl(second) : null,
+      secondaryLabel: second ? 'Try "' + terms[1] + '"' : null
+    }));
 
-  const netGrid = $('#sNetworkLinks'); netGrid.innerHTML = '';
-  netGrid.appendChild(makeResourceCard({title:'LinkedIn — people search', desc:'Trace a lab\'s current and former students, and how they describe their work.', primaryUrl:linkedinPeopleUrl(query)}));
-  netGrid.appendChild(makeResourceCard({title:'ResearchGate', desc:'Researcher profiles with open Q&A threads — good for niche sub-fields.', primaryUrl:researchgateUrl(query)}));
-  netGrid.appendChild(makeResourceCard({title:'Google — research groups', desc:'Broader sweep for labs and research groups, not just individuals.', primaryUrl:googleSiteUrl(query + ' (research group OR laboratory)', '')}));
+    // LinkedIn's people search doesn't parse boolean OR groups, so it gets the single strongest term.
+    netGrid.appendChild(makeResourceCard({title:'LinkedIn — people search', desc:'Trace a lab\'s current and former students, and how they describe their work.', primaryUrl:linkedinPeopleUrl(authorQuery)}));
+    netGrid.appendChild(makeResourceCard({title:'ResearchGate', desc:'Researcher profiles with open Q&A threads — good for niche sub-fields.', primaryUrl:researchgateUrl(query)}));
+    netGrid.appendChild(makeResourceCard({title:'Google — research groups', desc:'Broader sweep for labs and research groups, not just individuals.', primaryUrl:googleSiteUrl(query + ' (research group OR laboratory)', '')}));
 
-  const facGrid = $('#sFacultyLinks'); facGrid.innerHTML = '';
-  facGrid.appendChild(makeResourceCard({title:'Faculty pages — ' + region.label, desc:'A site-restricted search across every combined interest at once.', primaryUrl:googleSiteUrl(query + ' (faculty OR professor OR "research interests")', region.site)}));
-  ids.slice(0,5).forEach(id=>{
-    const i = INTERESTS.find(x=>x.id===id);
-    facGrid.appendChild(makeResourceCard({title:i.label + ' faculty — ' + region.label, desc:'Narrowed to just this one interest.', primaryUrl:googleSiteUrl(quotePhrase(i.kw) + ' (faculty OR professor)', region.site)}));
-  });
+    facGrid.appendChild(makeResourceCard({title:'Faculty pages — ' + region.label, desc:'A site-restricted search across every combined interest at once.', primaryUrl:googleSiteUrl(query + ' (faculty OR professor OR "research interests")', region.site)}));
+    ids.slice(0,5).forEach(id=>{
+      const i = INTERESTS.find(x=>x.id===id);
+      if(!i) return;
+      facGrid.appendChild(makeResourceCard({title:i.label + ' faculty — ' + region.label, desc:'Narrowed to just this one interest.', primaryUrl:googleSiteUrl(quotePhrase(i.kw) + ' (faculty OR professor)', region.site)}));
+    });
+  }
 
   const listGrid = $('#sListingLinks'); listGrid.innerHTML = '';
   RESOURCES.filter(r=>r.cat==='listings').forEach(r=>{
     listGrid.appendChild(makeResourceCard({
       title:r.name, desc:r.desc, cat:r.cat,
       primaryLabel:'Open site', primaryUrl:r.url,
-      secondaryLabel:'Search "'+query+'"', secondaryUrl:googleSiteUrl(query, 'site:'+domainOf(r.url))
+      secondaryLabel: query ? 'Search "' + query + '"' : null,
+      secondaryUrl: query ? googleSiteUrl(query, 'site:' + domainOf(r.url)) : null
     }));
   });
 
@@ -1774,6 +1950,8 @@ function updateProposalProgress(){
   if(t) t.textContent = done + ' of ' + PROPOSAL_SECTIONS.length + ' sections started';
 }
 
+function proposalHasContent(){ return PROPOSAL_SECTIONS.some(s => state.proposal[s.key] && state.proposal[s.key].trim()); }
+
 function proposalFieldBlock(sec){
   const wrap = el('div',{class:'card stack'});
   const fieldId = 'prop_' + sec.key;
@@ -1786,7 +1964,8 @@ function proposalFieldBlock(sec){
   let aiBtn=null, aiBox=null, aiOut=null;
   if(sec.ai){
     aiBtn = el('button',{type:'button', class:'btn ai sm', hidden:'true', html: svgIcon('sparkle') + '<span>Draft with AI</span>'});
-    head.appendChild(el('div',{class:'btn-row'},[aiBtn]));
+    const copyBtn = aiFallbackButton('sm', ()=> copyAiPrompt(buildProposalPrompt(sec)));
+    head.appendChild(el('div',{class:'btn-row'},[aiBtn, copyBtn]));
   } else {
     head.appendChild(el('span',{class:'field-help', text:'Written by you — AI drafting is off here to avoid fabricated citations.'}));
   }
@@ -1808,7 +1987,7 @@ function proposalFieldBlock(sec){
   wrap.appendChild(ta);
 
   const wc = el('div',{class:'wordcount'});
-  const updateWc = ()=>{ const t = ta.value.trim(); wc.textContent = (t? t.split(/\s+/).length : 0) + ' words'; };
+  const updateWc = ()=>{ wc.textContent = countWords(ta.value) + ' words'; };
   updateWc();
   wrap.appendChild(wc);
 
@@ -1819,8 +1998,11 @@ function proposalFieldBlock(sec){
       const text = await runAi(aiBtn, aiBox, aiOut, buildProposalPrompt(sec), {modelTier:'complex'});
       if(text==null) aiBox.classList.remove('show');
     });
-    aiBox.querySelector('.btn.primary').addEventListener('click', ()=>{
-      ta.value = aiOut.textContent.trim();
+    aiBox.querySelector('.btn.primary').addEventListener('click', async ()=>{
+      const draft = aiOut.textContent.trim();
+      if(!draft){ showToast('Nothing to insert yet'); return; }
+      if(ta.value.trim() && ta.value.trim() !== draft && !(await confirmAction('Replace what you have already written in "' + sec.label + '" with this AI draft?', 'Replace'))) return;
+      ta.value = draft;
       state.proposal[sec.key] = ta.value;
       updateWc(); saveState(); updateProposalProgress();
       aiBox.classList.remove('show');
@@ -1856,9 +2038,32 @@ function renderProposalPanel(){
    OUTREACH
    ============================================================ */
 
+const HONORIFIC_RE = /^(associate professor|assistant professor|assoc\.?\s*prof\.?|asst\.?\s*prof\.?|a\/prof\.?|professor|prof\.?|doctor|dr\.?|mr\.?|mrs\.?|ms\.?|mx\.?)\s+/i;
+/** Academic salutation convention: honorific + surname ("Dear Associate Professor Chen"). An honorific typed
+ *  into the name field is never doubled ("Dr Dr Alex Chen" was the old output for the placeholder example). */
+function salutationName(title, name){
+  let n = String(name||'').trim(), fromName = '';
+  const m = n.match(HONORIFIC_RE);
+  if(m){ fromName = m[0].trim(); n = n.slice(m[0].length).trim(); }
+  const honorific = String(title||'').trim() || fromName || 'Dr';
+  const surname = n ? n.split(/\s+/).pop() : '[Surname]';
+  return honorific + ' ' + surname;
+}
+const STAGE_PHRASES = {
+  'Final-year undergraduate':'a final-year undergraduate student', 'Honours student':'an Honours student',
+  'Master’s student (coursework)':'a Master’s student', 'Master’s student (by research)':'a Master’s by Research student',
+  'Working professional':'a working professional', 'Other':'a prospective research student'
+};
+const DEGREE_INFO = {
+  'PhD':{noun:'PhD', a:'a PhD', role:'PhD student', where:'under your supervision', app:'the PhD program'},
+  'MRes / MPhil':{noun:'MRes/MPhil', a:'an MRes/MPhil', role:'MRes/MPhil student', where:'under your supervision', app:'the MRes/MPhil program'},
+  'Master’s by Research':{noun:'Master’s by Research', a:'a Master’s by Research', role:'Master’s by Research student', where:'under your supervision', app:'the Master’s by Research program'},
+  'Postdoctoral position':{noun:'postdoctoral position', a:'a postdoctoral position', role:'postdoctoral researcher', where:'in your group', app:'the postdoctoral position'}
+};
+const START_PHRASES = {'Within 6 months':'within the next six months', '6–12 months':'in the next 6–12 months', '12+ months':'in a year or more', 'Flexible':'with a flexible start date'};
+
 function buildEmail(type, f, p){
-  const recTitle = f.title ? f.title.trim() : 'Dr';
-  const recName = f.name ? f.name.trim() : '[Recipient name]';
+  const salut = salutationName(f.title, f.name);
   const focus = f.focus ? f.focus.trim() : '[their research focus]';
   const connection = f.connection ? f.connection.trim() : '';
   const hook = f.hook ? f.hook.trim() : '[One or two sentences on relevant experience — a project, thesis chapter, or paper that connects to their work.]';
@@ -1866,27 +2071,41 @@ function buildEmail(type, f, p){
   const cvAttached = f.cvAttached !== 'no';
   const followUpTiming = f.followUpTiming || 'a couple of weeks ago';
   const yourName = p.name || '[your name]';
-  const yourStage = p.stage || 'graduate student';
-  const yourField = (p.interests && p.interests.length) ? p.interests.map(interestLabel).join(', ') : (p.keywords || '[your field]');
-  const degree = p.degree || 'PhD';
-  const start = p.start || 'in the coming year';
-  const links = p.links ? p.links.split('\n').filter(Boolean).join(' · ') : '[LinkedIn / Scholar / portfolio link]';
+  const stagePhrase = STAGE_PHRASES[p.stage] || 'a prospective research student';
+  const labels = (p.interests||[]).map(interestLabel);
+  const yourField = p.keywords ? p.keywords.trim() : (labels.length ? joinWithConjunction(labels, 'and') : '[your field]');
+  const deg = DEGREE_INFO[p.degree] || DEGREE_INFO['PhD'];
+  const start = START_PHRASES[p.start] || 'in the coming year';
+  const links = p.links ? p.links.split('\n').map(s=>s.trim()).filter(Boolean).join(' · ') : '[LinkedIn / Scholar / portfolio link]';
 
   let subject, body;
   if(type==='followup'){
-    subject = 'Following up — prospective ' + degree + ' student';
-    body = 'Dear ' + recTitle + ' ' + recName + ',\n\nI wrote to you ' + followUpTiming + ' about a possible ' + degree + ' under your supervision, focused on ' + yourField + '. I know these emails are easy to lose in a busy inbox, so I wanted to follow up briefly in case it slipped through.\n\n' + hook + '\n\nIf now isn’t a good time, I completely understand — I’d still appreciate knowing either way, or being pointed toward a colleague who might be a better fit.\n\nThank you again for your time,\n' + yourName + '\n' + links;
+    subject = 'Following up — prospective ' + deg.role;
+    body = 'Dear ' + salut + ',\n\nI wrote to you ' + followUpTiming + ' about a possible ' + deg.noun + ' ' + deg.where + ', focused on ' + yourField + '. I know these emails are easy to lose in a busy inbox, so I wanted to follow up briefly in case it slipped through.\n\n' + hook + '\n\nIf now isn’t a good time, I completely understand — I’d still appreciate knowing either way, or being pointed toward a colleague who might be a better fit.\n\nThank you again for your time,\n' + yourName + '\n' + links;
   } else if(type==='thanks'){
     subject = 'Thank you for your advice';
-    body = 'Dear ' + recTitle + ' ' + recName + ',\n\nThank you for taking the time to speak with me' + (connection ? ' ' + connection : '') + ' — I really appreciated your perspective on ' + focus + '.\n\n' + hook + '\n\n' + (f.ask ? f.ask.trim() + '\n\n' : '') + 'Thanks again for your generosity with your time.\n\nBest regards,\n' + yourName + '\n' + links;
+    body = 'Dear ' + salut + ',\n\nThank you for taking the time to speak with me' + (connection ? ' ' + connection : '') + ' — I really appreciated your perspective on ' + focus + '.\n\n' + hook + '\n\n' + (f.ask ? f.ask.trim() + '\n\n' : '') + 'Thanks again for your generosity with your time.\n\nBest regards,\n' + yourName + '\n' + links;
   } else if(type==='inquiry'){
     subject = 'Checking in on my application status';
-    body = 'Dear ' + recTitle + ' ' + recName + ',\n\nI hope you are well. I submitted my application for the ' + degree + ' program' + (f.focus ? (' with a focus on ' + focus) : '') + ' and wanted to check whether there is any update on the review timeline.\n\n' + hook + '\n\nPlease let me know if there is anything further you need from me in the meantime.\n\nBest regards,\n' + yourName + '\n' + links;
+    body = 'Dear ' + salut + ',\n\nI hope you are well. I submitted my application for ' + deg.app + (f.focus ? (' with a focus on ' + focus) : '') + ' and wanted to check whether there is any update on the review timeline.\n\n' + hook + '\n\nPlease let me know if there is anything further you need from me in the meantime.\n\nBest regards,\n' + yourName + '\n' + links;
   } else {
-    subject = 'Prospective ' + degree + ' student interested in your work on ' + focus;
-    body = 'Dear ' + recTitle + ' ' + recName + ',\n\nMy name is ' + yourName + ', and I am a ' + yourStage + ' interested in pursuing a ' + degree + ' beginning ' + start + '. I came across your work on ' + focus + (connection ? ', ' + connection : '') + ', and it lines up closely with my own interest in ' + yourField + '.\n\n' + hook + '\n\nI wanted to ask ' + ask + ', and whether you would be open to a short call to discuss potential project directions.\n\n' + (cvAttached ? 'My CV is attached, and my' : 'My') + ' profile links are below if useful. Thank you for taking the time to read this.\n\nBest regards,\n' + yourName + '\n' + links;
+    subject = 'Prospective ' + deg.role + ' interested in your work on ' + focus;
+    body = 'Dear ' + salut + ',\n\nMy name is ' + yourName + ', and I am ' + stagePhrase + ' interested in pursuing ' + deg.a + ' ' + start + '. I came across your work on ' + focus + (connection ? ', ' + connection : '') + ', and it lines up closely with my own interest in ' + yourField + '.\n\n' + hook + '\n\nI wanted to ask ' + ask + ', and whether you would be open to a short call to discuss potential project directions.\n\n' + (cvAttached ? 'My CV is attached, and my' : 'My') + ' profile links are below if useful. Thank you for taking the time to read this.\n\nBest regards,\n' + yourName + '\n' + links;
   }
   return {subject, body};
+}
+function buildPolishPrompt(body){
+  return 'Lightly polish the tone and tighten the length of this outreach email. Keep the same structure, facts and ask — do not invent new claims, names or links. Keep it under 220 words. Return only the polished email body: no subject line, no commentary, no markdown.\n\nEmail:\n' + body;
+}
+function updateOutreachWordCount(){
+  const w = countWords($('#oBody').value);
+  const t = $('#oWordCount');
+  if(t) t.textContent = w + ' words' + (w > 200 ? ' — a first email works best under 200' : '');
+}
+function outreachEmailText(){
+  const body = $('#oBody').value.trim();
+  if(!body) return '';
+  return 'Subject: ' + $('#oSubject').value.trim() + '\n\n' + body;
 }
 
 function outreachFieldIds(){ return ['oType','oRecipientTitle','oRecipientName','oRecipientFocus','oConnection','oHook','oAsk','oCvAttached','oFollowUpTiming','oSubject','oBody']; }
@@ -1906,6 +2125,7 @@ function renderOutreachPanel(){
   $('#oHook').value = o.hook || ''; $('#oAsk').value = o.ask || '';
   $('#oCvAttached').value = o.cvAttached || 'yes'; $('#oFollowUpTiming').value = o.followUpTiming || 'a couple of weeks ago';
   $('#oSubject').value = o.subject || ''; $('#oBody').value = o.body || '';
+  updateOutreachWordCount();
   revealAiButtons();
 }
 
@@ -1951,24 +2171,32 @@ function renderPapersPanel(){
 function renderPaperLinks(){
   const query = currentQuery(state.rSel.interests, state.rSel.keyword);
   const grid = $('#rSearchLinks'); grid.innerHTML = '';
-  grid.appendChild(makeResourceCard({title:'Google Scholar', desc:'Broadest academic search, ranked by citation count.', primaryUrl:scholarSearchUrl(query)}));
-  grid.appendChild(makeResourceCard({title:'Semantic Scholar', desc:'AI-ranked results with TL;DR summaries and citation graphs.', primaryUrl:semanticUrl(query)}));
-  grid.appendChild(makeResourceCard({title:'arXiv', desc:'Preprints — fastest way to see very recent CS/maths/physics work.', primaryUrl:arxivUrl(query)}));
-  grid.appendChild(makeResourceCard({title:'PubMed', desc:'The core index for biomedical and life-sciences literature.', primaryUrl:pubmedUrl(query)}));
-  grid.appendChild(makeResourceCard({title:'CORE', desc:'One of the largest open-access research collections.', primaryUrl:coreUrl(query)}));
+  if(!query){
+    grid.appendChild(el('p',{class:'field-help', style:'grid-column:1 / -1;', text:'Choose an interest or add a keyword above to build live literature searches. The tools below work without one — open them and search inside.'}));
+  } else {
+    grid.appendChild(makeResourceCard({title:'Google Scholar', desc:'Broadest academic search, ranked by citation count.', primaryUrl:scholarSearchUrl(query)}));
+    grid.appendChild(makeResourceCard({title:'Semantic Scholar', desc:'AI-ranked results with TL;DR summaries and citation graphs.', primaryUrl:semanticUrl(query)}));
+    grid.appendChild(makeResourceCard({title:'arXiv', desc:'Preprints — fastest way to see very recent CS/maths/physics work.', primaryUrl:arxivUrl(query)}));
+    grid.appendChild(makeResourceCard({title:'PubMed', desc:'The core index for biomedical and life-sciences literature.', primaryUrl:pubmedUrl(query)}));
+    grid.appendChild(makeResourceCard({title:'CORE', desc:'One of the largest open-access research collections.', primaryUrl:coreUrl(query)}));
+  }
   ['connectedpapers','researchrabbit','elicit','openalex'].forEach(id=>{
     const r = RESOURCES.find(x=>x.id===id);
     grid.appendChild(makeResourceCard({title:r.name, desc:r.desc + ' Open it, then search inside for your topic.', primaryUrl:r.url}));
   });
 }
 
+function buildFrameworkPrompt(human){
+  const topic = ($('#fwTopic').value||'').trim();
+  return 'Suggest up to 6 relevant tools, frameworks, methods or public datasets a researcher could use for this topic. For each, give ONLY its real, well-known name (e.g. "PyTorch", "PRISMA", "UCI Machine Learning Repository") — nothing invented, and nothing you are not confident actually exists. '
+    + (human ? 'Return a plain list, one name per line, each followed by a few words on why it fits.' : 'Return ONLY a JSON array of strings, nothing else.')
+    + '\n\nTopic: ' + (topic || interestKw(state.rSel.interests) || 'general research methods') + (state.profile.bio ? ('\nApplicant background: ' + state.profile.bio) : '');
+}
 async function suggestFrameworks(){
-  const topic = $('#fwTopic').value.trim();
   const btn = $('#fwSuggestBtn');
   const out = $('#fwOut');
-  const prompt = 'Suggest up to 6 relevant tools, frameworks, methods or public datasets a researcher could use for this topic. For each, give ONLY its real, well-known name (e.g. "PyTorch", "PRISMA", "UCI Machine Learning Repository") — nothing invented, and nothing you are not confident actually exists. Return ONLY a JSON array of strings, nothing else.\n\nTopic: ' + (topic || interestKw(state.rSel.interests) || 'general research methods') + (state.profile.bio ? ('\nApplicant background: ' + state.profile.bio) : '');
   btn.disabled = true; out.innerHTML = '<span class="field-help">Thinking…</span>';
-  const list = await runAiJson(prompt, {modelTier:'quick'});
+  const list = await runAiJson(buildFrameworkPrompt(false), {modelTier:'quick'});
   btn.disabled = false;
   out.innerHTML = '';
   if(!Array.isArray(list) || !list.length){ out.innerHTML = '<span class="field-help">Could not generate suggestions — try adding more detail to the topic.</span>'; return; }
@@ -1989,14 +2217,18 @@ function renderJournalsPanel(){
   revealAiButtons();
 }
 
+function buildVenuePrompt(abstract, human){
+  return 'Based on this research topic or abstract, suggest (1) 6 short search keywords a researcher should paste into journal-finder tools, and (2) 3 general venue TYPES suited to this work (e.g. "mid-tier open-access ML journal", "top-tier HCI conference", "regional agricultural science journal") — do NOT name specific journal titles, only types and keywords, since exact matches must be verified with a real journal-finder tool. '
+    + (human ? 'Return two short labelled lists: "Search keywords" and "Venue types".' : 'Return ONLY JSON of the exact shape {"keywords": string[], "venueTypes": string[]}.')
+    + '\n\nTopic/abstract:\n' + abstract;
+}
 async function suggestVenue(){
   const abstract = $('#jAbstract').value.trim();
   const btn = $('#jSuggestBtn');
   const out = $('#jOut');
   if(!abstract){ showToast('Paste a title or abstract first'); return; }
-  const prompt = 'Based on this research topic or abstract, suggest (1) 6 short search keywords a researcher should paste into journal-finder tools, and (2) 3 general venue TYPES suited to this work (e.g. "mid-tier open-access ML journal", "top-tier HCI conference", "regional agricultural science journal") — do NOT name specific journal titles, only types and keywords, since exact matches must be verified with a real journal-finder tool. Return ONLY JSON of the exact shape {"keywords": string[], "venueTypes": string[]}.\n\nTopic/abstract:\n' + abstract;
   btn.disabled = true; out.innerHTML = '<span class="field-help">Thinking…</span>';
-  const data = await runAiJson(prompt, {modelTier:'quick'});
+  const data = await runAiJson(buildVenuePrompt(abstract, false), {modelTier:'quick'});
   btn.disabled = false;
   out.innerHTML = '';
   if(!data || !Array.isArray(data.keywords)){ out.innerHTML = '<span class="field-help">Could not generate suggestions — try pasting a fuller abstract.</span>'; return; }
@@ -2020,43 +2252,79 @@ async function suggestVenue(){
    TIMELINE & CHECKLIST
    ============================================================ */
 
-// Plain client-side Blob download — works identically with no backend and no
-// window.claude capability, unlike saveOrCopy()'s AI-gated download/clipboard
-// path, because a calendar app needs an actual .ics file to import.
+// Plain client-side Blob download — what saveFile() uses whenever the Claude downloads capability is absent
+// (the public GitHub Pages copy, or the file opened directly).
 function downloadBlob(filename, text, mime){
   const blob = new Blob([text], {type: mime});
   const url = URL.createObjectURL(blob);
   const a = el('a', {href:url, download:filename});
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  setTimeout(()=> URL.revokeObjectURL(url), 1000);
+  setTimeout(()=> URL.revokeObjectURL(url), 1500);
 }
 function icsPad2(n){ return String(n).padStart(2,'0'); }
 function icsDateStamp(d){ return d.getFullYear() + icsPad2(d.getMonth()+1) + icsPad2(d.getDate()); }
+function icsUtcStamp(d){ return d.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z'); }
+function icsEscape(s){ return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n'); }
+/** RFC 5545 §3.1: a content line longer than 75 octets must be folded (CRLF followed by one space). */
+function icsFold(line){
+  const enc = new TextEncoder();
+  if(enc.encode(line).length <= 75) return line;
+  const parts = []; let cur = '', len = 0;
+  for(const ch of line){
+    const n = enc.encode(ch).length;
+    if(len + n > 75){ parts.push(cur); cur = ' ' + ch; len = 1 + n; }
+    else { cur += ch; len += n; }
+  }
+  parts.push(cur);
+  return parts.join('\r\n');
+}
+function parseIsoDate(str){
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(str||''));
+  if(!m) return null;
+  const d = new Date(+m[1], +m[2]-1, +m[3]);
+  return (d.getFullYear()===+m[1] && d.getMonth()===+m[2]-1 && d.getDate()===+m[3]) ? d : null;
+}
+/** Calendar-correct month subtraction: 31 March minus one month is the last day of February, not 3 March. */
+function subtractMonths(date, months){
+  const d = new Date(date.getFullYear(), date.getMonth(), 1);
+  d.setMonth(d.getMonth() - months);
+  const last = new Date(d.getFullYear(), d.getMonth()+1, 0).getDate();
+  d.setDate(Math.min(date.getDate(), last));
+  return d;
+}
+function fmtDate(d){ try{ return d.toLocaleDateString(undefined, {day:'numeric', month:'short', year:'numeric'}); }catch(e){ return icsDateStamp(d); } }
 function stageMonthsOut(whenStr){ const m = whenStr.match(/(\d+)/); return m ? parseInt(m[1],10) : 0; }
 function buildTimelineIcs(targetDateStr){
-  const target = new Date(targetDateStr + 'T00:00:00');
-  if(isNaN(target.getTime())) return null;
-  const stamp = icsDateStamp(new Date()) + 'T000000Z';
+  const target = parseIsoDate(targetDateStr);
+  if(!target) return null;
+  const stamp = icsUtcStamp(new Date());
   const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Postgraduate Research Planner//EN','CALSCALE:GREGORIAN'];
   TIMELINE_STAGES.forEach(stage=>{
     const months = stageMonthsOut(stage.when);
-    const start = new Date(target); start.setMonth(start.getMonth() - months);
-    const end = new Date(start); end.setDate(end.getDate() + 1);
+    const start = subtractMonths(target, months);
+    const end = new Date(start.getFullYear(), start.getMonth(), start.getDate() + 1);
     lines.push('BEGIN:VEVENT');
     lines.push('UID:prp-' + stage.id + '-' + icsDateStamp(target) + '@postgraduate-research-planner');
     lines.push('DTSTAMP:' + stamp);
     lines.push('DTSTART;VALUE=DATE:' + icsDateStamp(start));
     lines.push('DTEND;VALUE=DATE:' + icsDateStamp(end));
-    lines.push('SUMMARY:PhD planner — ' + stage.name);
-    lines.push('DESCRIPTION:Personal planning reminder computed from the target date you entered (' + targetDateStr + ') and this stage\'s rough ' + months + '-month window. Not an official deadline \u2014 always confirm the real date with your target program.');
+    lines.push('SUMMARY:' + icsEscape('PhD planner — ' + stage.name));
+    lines.push('DESCRIPTION:' + icsEscape('Personal planning reminder computed from the target date you entered (' + targetDateStr + ') and this stage\'s rough ' + months + '-month window. Checklist: ' + stage.items.join('; ') + '. Not an official deadline — always confirm the real date with your target program.'));
     lines.push('END:VEVENT');
   });
   lines.push('END:VCALENDAR');
-  return lines.join('\r\n');
+  return lines.map(icsFold).join('\r\n') + '\r\n';
 }
 
-function renderTimelinePanel(){
+function renderTimelinePanel(focusKey){
   $('#tlTargetDate').value = state.timelineTargetDate || '';
+  const target = parseIsoDate(state.timelineTargetDate);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const note = $('#tlDateNote');
+  if(note){
+    note.hidden = !(target && target < today);
+    note.textContent = note.hidden ? '' : 'That date is already in the past — every reminder computed from it would be in the past too.';
+  }
   const host = $('#timelineStages');
   host.innerHTML = '';
   let totalItems=0, totalDone=0;
@@ -2065,6 +2333,11 @@ function renderTimelinePanel(){
     const head = el('div',{class:'stage-head'});
     head.appendChild(el('h3',{class:'section-title', text:stage.name}));
     head.appendChild(el('span',{class:'pill todo', text:stage.when}));
+    if(target){
+      const d = subtractMonths(target, stageMonthsOut(stage.when));
+      const past = d < today;
+      head.appendChild(el('span',{class:'pill accent stage-date' + (past ? ' past' : ''), text:'Start by ' + fmtDate(d) + (past ? ' (passed)' : '')}));
+    }
     const stageProgress = el('span',{class:'field-help'});
     head.appendChild(stageProgress);
     wrap.appendChild(head);
@@ -2082,7 +2355,7 @@ function renderTimelinePanel(){
       cb.addEventListener('change', ()=>{
         state.checklist[key] = cb.checked;
         saveState();
-        renderTimelinePanel();
+        renderTimelinePanel(key); // re-render, then put keyboard focus back on the same checkbox
       });
       row.appendChild(cb); row.appendChild(lbl);
       wrap.appendChild(row);
@@ -2092,6 +2365,7 @@ function renderTimelinePanel(){
   });
   { const pct = totalItems ? Math.round((totalDone/totalItems)*100) : 0; $('#tlOverallBar').style.width = pct+'%'; $('#tlOverallBar').parentElement.setAttribute('aria-valuenow', String(pct)); }
   $('#tlOverallText').textContent = totalDone + ' of ' + totalItems + ' steps complete';
+  if(typeof focusKey === 'string'){ const f = $('#cb_' + focusKey); if(f) f.focus(); }
 }
 
 /* ============================================================
@@ -2103,11 +2377,11 @@ function renderLibraryPanel(){
   if(!tabsHost.dataset.built){
     const cats = ['all', ...Object.keys(CATEGORY_LABELS)];
     cats.forEach(cat=>{
-      const tab = el('button',{type:'button', class:'tab' + (cat==='all'?' active':''), text: cat==='all' ? 'All' : CATEGORY_LABELS[cat]});
+      const tab = el('button',{type:'button', class:'tab' + (cat==='all'?' active':''), 'aria-pressed': cat==='all' ? 'true' : 'false', text: cat==='all' ? 'All' : CATEGORY_LABELS[cat]});
       tab.dataset.cat = cat;
       tab.addEventListener('click', ()=>{
-        $all('.tab', tabsHost).forEach(t=>t.classList.remove('active'));
-        tab.classList.add('active');
+        $all('.tab', tabsHost).forEach(t=>{ t.classList.remove('active'); t.setAttribute('aria-pressed','false'); });
+        tab.classList.add('active'); tab.setAttribute('aria-pressed','true');
         filterLibrary();
       });
       tabsHost.appendChild(tab);
@@ -2235,7 +2509,12 @@ function renderArenaPanel(){
       card.appendChild(el('span',{class:'arena-tool-name', text:t.label}));
       card.appendChild(el('span',{class:'arena-tool-desc', text:t.desc}));
       card.dataset.tool = t.id;
-      card.addEventListener('click', ()=>{ state.arena.tool = t.id; saveState(); switchArenaTool(t.id); });
+      card.addEventListener('click', ()=>{
+        state.arena.tool = t.id; saveState(); switchArenaTool(t.id);
+        if(window.matchMedia && window.matchMedia('(max-width:820px)').matches){
+          const b = $('#arenaToolBody'); if(b && b.scrollIntoView) b.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
       grid.appendChild(card);
     });
     grid.dataset.built = '1';
@@ -2250,9 +2529,9 @@ const ARENA_RENDERERS = {
 };
 
 function switchArenaTool(id){
-  if(!ARENA_RENDERERS[id]) id = 'scholar';
+  if(!Object.prototype.hasOwnProperty.call(ARENA_RENDERERS, id)) id = 'scholar';
   state.arena.tool = id;
-  $all('.arena-tool-card', $('#arenaToolGrid')).forEach(c=> c.classList.toggle('active', c.dataset.tool===id));
+  $all('.arena-tool-card', $('#arenaToolGrid')).forEach(c=>{ const on = c.dataset.tool===id; c.classList.toggle('active', on); c.setAttribute('aria-pressed', on ? 'true' : 'false'); });
   const body = $('#arenaToolBody');
   body.innerHTML = '';
   ARENA_RENDERERS[id](body);
@@ -2260,7 +2539,7 @@ function switchArenaTool(id){
 }
 
 /* ---- 1. Scholarly & researcher search (papers or people) ---- */
-let arenaScholarMode = 'papers';
+let arenaScholarMode = 'papers', arenaScholarQuery = '', arenaScholarHasRun = false;
 function renderArenaScholar(body){
   const wrap = el('div',{class:'stack'});
   const card = el('div',{class:'card stack'});
@@ -2269,14 +2548,16 @@ function renderArenaScholar(body){
     el('p',{class:'field-help', style:'margin-bottom:2px;', text:'OpenAlex indexes hundreds of millions of works and links every one to its authors, institutions and citations — Semantic Scholar layers AI-ranked relevance on top, and Crossref is the canonical DOI registry underneath both.'})
   ]));
   const modeRow = el('div',{class:'chip-row'});
-  const papersChip = el('button',{type:'button', class:'chip'+(arenaScholarMode==='papers'?' selected':''), 'aria-pressed': arenaScholarMode==='papers'?'true':'false', text:'Papers & topics'});
-  const peopleChip = el('button',{type:'button', class:'chip'+(arenaScholarMode==='people'?' selected':''), 'aria-pressed': arenaScholarMode==='people'?'true':'false', text:'Researchers'});
-  papersChip.addEventListener('click', ()=>{ arenaScholarMode='papers'; switchArenaTool('scholar'); });
-  peopleChip.addEventListener('click', ()=>{ arenaScholarMode='people'; switchArenaTool('scholar'); });
+  const papersChip = el('button',{type:'button', id:'arScholarModePapers', class:'chip'+(arenaScholarMode==='papers'?' selected':''), 'aria-pressed': arenaScholarMode==='papers'?'true':'false', text:'Papers & topics'});
+  const peopleChip = el('button',{type:'button', id:'arScholarModePeople', class:'chip'+(arenaScholarMode==='people'?' selected':''), 'aria-pressed': arenaScholarMode==='people'?'true':'false', text:'Researchers'});
+  papersChip.addEventListener('click', ()=> setArenaScholarMode('papers'));
+  peopleChip.addEventListener('click', ()=> setArenaScholarMode('people'));
   modeRow.appendChild(papersChip); modeRow.appendChild(peopleChip);
   card.appendChild(modeRow);
   const row = el('div',{class:'grid cols-2'});
-  const inp = el('input',{type:'text', id:'arScholarQ', placeholder: arenaScholarMode==='people' ? 'e.g. Kevin Chen graph neural networks' : 'e.g. graph neural networks for financial fraud detection with imbalanced datasets'});
+  const inp = el('input',{type:'text', id:'arScholarQ', 'aria-label':'Search query', placeholder: arenaScholarMode==='people' ? 'e.g. Kevin Chen graph neural networks' : 'e.g. graph neural networks for financial fraud detection with imbalanced datasets'});
+  inp.value = arenaScholarQuery;
+  inp.addEventListener('input', ()=>{ arenaScholarQuery = inp.value; });
   const btn = el('button',{class:'btn primary', type:'button', text: arenaScholarMode==='people' ? 'Find researcher' : 'Search'});
   btn.addEventListener('click', runArenaScholarSearch);
   inp.addEventListener('keydown', (e)=>{ if(e.key==='Enter') runArenaScholarSearch(); });
@@ -2288,19 +2569,29 @@ function renderArenaScholar(body){
   wrap.appendChild(out);
   body.appendChild(wrap);
 }
+/** Switching between Papers and Researchers keeps what you typed (it used to wipe the box), and re-runs
+ *  the search in the new mode if you had already searched. */
+function setArenaScholarMode(mode){
+  arenaScholarMode = mode;
+  switchArenaTool('scholar');
+  if(arenaScholarHasRun && arenaScholarQuery.trim()) runArenaScholarSearch();
+  const chip = $(mode === 'people' ? '#arScholarModePeople' : '#arScholarModePapers'); if(chip) chip.focus();
+}
 function runArenaScholarSearch(){
   const q = ($('#arScholarQ').value||'').trim();
+  arenaScholarQuery = $('#arScholarQ').value;
   const out = $('#arScholarOut');
   if(!q){ showToast('Type something to search'); return; }
+  arenaScholarHasRun = true;
   out.innerHTML = '';
   if(arenaScholarMode==='people'){
-    out.appendChild(makeResourceCard({title:'OpenAlex — author profile', desc:'Works count, citation trend and current institution, linked to every paper.', primaryUrl:'https://openalex.org/authors?search='+qs(q)}));
+    out.appendChild(makeResourceCard({title:'OpenAlex — author profile', desc:'Works count, citation trend and current institution, linked to every paper.', primaryUrl:openAlexUrl('authors', q)}));
     out.appendChild(makeResourceCard({title:'ORCID', desc:'A verified, ID-linked publication record.', primaryUrl:orcidUrl(q)}));
     out.appendChild(makeResourceCard({title:'Google Scholar — profiles', desc:'Citation counts and an h-index at a glance, when the person has a public profile.', primaryUrl:scholarAuthorUrl(q)}));
-    out.appendChild(makeResourceCard({title:'Semantic Scholar', desc:'Author page with a paper list and citation graph.', primaryUrl:semanticUrl(q)}));
+    out.appendChild(makeResourceCard({title:'Semantic Scholar', desc:'Search by name, then open the matching author from a paper’s byline for their full profile and citation graph.', primaryUrl:semanticUrl(q)}));
     out.appendChild(makeResourceCard({title:'LinkedIn', desc:'Current role, affiliation history and shared connections.', primaryUrl:linkedinPeopleUrl(q)}));
   } else {
-    out.appendChild(makeResourceCard({title:'OpenAlex — scholarly graph', desc:'Works, authors, institutions and citations in one open, linked graph — follow any result into its citing and cited work.', primaryUrl:'https://openalex.org/works?search='+qs(q), primaryLabel:'Search OpenAlex'}));
+    out.appendChild(makeResourceCard({title:'OpenAlex — scholarly graph', desc:'Works, authors, institutions and citations in one open, linked graph — follow any result into its citing and cited work.', primaryUrl:openAlexUrl('works', q), primaryLabel:'Search OpenAlex'}));
     out.appendChild(makeResourceCard({title:'Semantic Scholar', desc:'AI-ranked relevance with TL;DR summaries and a citation graph.', primaryUrl:semanticUrl(q)}));
     out.appendChild(makeResourceCard({title:'Crossref', desc:'The canonical DOI registry most other tools build on.', primaryUrl:'https://search.crossref.org/?q='+qs(q)}));
     out.appendChild(makeResourceCard({title:'arXiv', desc:'Preprints — the fastest look at very recent CS/physics/maths work.', primaryUrl:arxivUrl(q)}));
@@ -2321,7 +2612,7 @@ function renderArenaDatasets(body){
     el('p',{class:'field-help', text:'Searches the general-purpose and domain hubs researchers actually use.'})
   ]));
   const row = el('div',{class:'grid cols-2'});
-  const inp = el('input',{type:'text', id:'arDatasetQ', placeholder:'e.g. credit card fraud detection'});
+  const inp = el('input',{type:'text', id:'arDatasetQ', 'aria-label':'Dataset topic', placeholder:'e.g. credit card fraud detection'});
   const btn = el('button',{class:'btn primary', type:'button', text:'Search datasets'});
   btn.addEventListener('click', runArenaDatasetSearch);
   inp.addEventListener('keydown', (e)=>{ if(e.key==='Enter') runArenaDatasetSearch(); });
@@ -2342,8 +2633,8 @@ function renderArenaDatasets(body){
     el('p',{class:'field-help', text:'Upload a CSV and get real, computed statistics — row/column counts, missing values, duplicate rows, a per-column type guess, and a class-balance check if you name a target column. This runs entirely in your browser; the file is never uploaded anywhere.'})
   ]));
   const fileRow = el('div',{class:'grid cols-2'});
-  const fileInp = el('input',{type:'file', id:'arDsFile', accept:'.csv,text/csv'});
-  const targetInp = el('input',{type:'text', id:'arDsTarget', placeholder:'Optional: target/label column name'});
+  const fileInp = el('input',{type:'file', id:'arDsFile', 'aria-label':'CSV file to check', accept:'.csv,.tsv,text/csv'});
+  const targetInp = el('input',{type:'text', id:'arDsTarget', 'aria-label':'Target or label column name (optional)', placeholder:'Optional: target/label column name'});
   fileRow.appendChild(fileInp); fileRow.appendChild(targetInp);
   healthCard.appendChild(fileRow);
   healthCard.appendChild(el('div',{id:'arDsOut'}));
@@ -2359,16 +2650,17 @@ function runArenaDatasetSearch(){
   const out = $('#arDatasetOut');
   if(!q){ showToast('Type a topic to search'); return; }
   out.innerHTML = '';
-  out.appendChild(makeResourceCard({title:'Kaggle', desc:'The largest general-purpose dataset hub, with notebooks attached.', primaryUrl:'https://www.kaggle.com/search?q='+qs(q)}));
+  out.appendChild(makeResourceCard({title:'Kaggle Datasets', desc:'The largest general-purpose dataset hub, with notebooks attached.', primaryUrl:'https://www.kaggle.com/datasets?search='+qs(q)}));
   out.appendChild(makeResourceCard({title:'Hugging Face Datasets', desc:'ML-ready datasets, versioned and loadable directly.', primaryUrl:'https://huggingface.co/datasets?search='+qs(q)}));
   out.appendChild(makeResourceCard({title:'Google Dataset Search', desc:'A search engine over dataset metadata across the open web.', primaryUrl:'https://datasetsearch.research.google.com/search?query='+qs(q)}));
-  out.appendChild(makeResourceCard({title:'OpenML', desc:'Datasets paired with benchmark results.', primaryUrl:'https://www.openml.org/search?q='+qs(q)+'&type=data'}));
-  out.appendChild(makeResourceCard({title:'Zenodo', desc:'Research datasets and software, each with a citable DOI.', primaryUrl:'https://zenodo.org/search?q='+qs(q)}));
-  out.appendChild(makeResourceCard({title:'Papers With Code — datasets', desc:'Datasets linked to the papers and leaderboards that use them (now under Hugging Face).', primaryUrl:'https://paperswithcode.com/search?q_meta=&q_type=&q='+qs(q)}));
+  out.appendChild(makeResourceCard({title:'OpenML', desc:'Datasets paired with benchmark results.', primaryUrl:'https://www.openml.org/search?type=data&q='+qs(q)}));
+  out.appendChild(makeResourceCard({title:'Zenodo — datasets', desc:'Research datasets with a citable DOI, filtered to datasets only.', primaryUrl:'https://zenodo.org/search?q='+qs(q)+'&f=resource_type%3Adataset'}));
+  out.appendChild(makeResourceCard({title:'Figshare', desc:'General-purpose repository for research data, figures and supplementary material.', primaryUrl:'https://figshare.com/search?q='+qs(q)}));
 }
 let lastDatasetCsvText = null, lastDatasetFileMeta = null;
 function handleDatasetFile(e){
-  const file = e.target.files && e.target.files[0];
+  const input = e.target;
+  const file = input.files && input.files[0];
   const out = $('#arDsOut');
   if(!file) return;
   out.innerHTML = '<p class="field-help">Reading file…</p>';
@@ -2380,6 +2672,7 @@ function handleDatasetFile(e){
   };
   reader.onerror = () => { out.innerHTML = '<p class="field-help">Could not read that file.</p>'; };
   reader.readAsText(file);
+  input.value = ''; // lets you pick the same (edited) file again and have it re-checked
 }
 function runDatasetAnalysis(){
   const out = $('#arDsOut');
@@ -2388,12 +2681,24 @@ function runDatasetAnalysis(){
     const stats = analyzeCsvText(lastDatasetCsvText, $('#arDsTarget').value.trim());
     renderDatasetStats(out, stats, lastDatasetFileMeta.name, lastDatasetFileMeta.size);
   }catch(err){
-    out.innerHTML = '<p class="field-help">Could not parse that file as CSV — check it is comma-separated with a header row.</p>';
+    out.innerHTML = '<p class="field-help">Could not parse that file as CSV — check it has a header row and no unclosed quotes.</p>';
   }
 }
-/* Minimal CSV parser: handles quoted fields with embedded commas/newlines/escaped quotes ("") — enough for a
+/** Guess the delimiter from the header line (outside quotes): comma, semicolon (common in European Excel
+ *  exports), tab or pipe. */
+function detectDelimiter(text){
+  const firstLine = String(text).split(/\r?\n/).find(l => l.trim() !== '') || '';
+  const counts = {',':0, ';':0, '\t':0, '|':0};
+  let inQ = false;
+  for(const c of firstLine){ if(c === '"') inQ = !inQ; else if(!inQ && Object.prototype.hasOwnProperty.call(counts, c)) counts[c]++; }
+  let best = ',', max = 0;
+  Object.keys(counts).forEach(k => { if(counts[k] > max){ max = counts[k]; best = k; } });
+  return best;
+}
+/* Minimal CSV parser: handles quoted fields with embedded delimiters/newlines/escaped quotes ("") — enough for a
  * quick client-side health check, not a full RFC 4180 implementation. */
-function parseCsv(text){
+function parseCsv(text, delim){
+  delim = delim || ',';
   const rows = [];
   let row = [], field = '', inQuotes = false;
   for(let i=0;i<text.length;i++){
@@ -2403,8 +2708,8 @@ function parseCsv(text){
       else if(c === '"'){ inQuotes = false; }
       else field += c;
     } else {
-      if(c === '"') inQuotes = true;
-      else if(c === ','){ row.push(field); field=''; }
+      if(c === '"' && field === '') inQuotes = true;
+      else if(c === delim){ row.push(field); field=''; }
       else if(c === '\n'){ row.push(field); rows.push(row); row=[]; field=''; }
       else if(c === '\r'){ /* skip — \n handles the line break */ }
       else field += c;
@@ -2415,7 +2720,9 @@ function parseCsv(text){
   return rows.filter(r => !(r.length===1 && r[0]===''));
 }
 function analyzeCsvText(text, targetCol){
-  const rows = parseCsv(text);
+  text = String(text).replace(/^\uFEFF/, ''); // Excel's UTF-8 BOM would otherwise glue itself onto the first header
+  const delim = detectDelimiter(text);
+  const rows = parseCsv(text, delim);
   if(!rows.length) throw new Error('empty');
   const headers = rows[0].map(h=>h.trim());
   const dataRows = rows.slice(1);
@@ -2435,12 +2742,13 @@ function analyzeCsvText(text, targetCol){
     return { name:h||('column '+(ci+1)), missing, missingPct: n? Math.round(missing/n*1000)/10 : 0, type, distinct: seenValues.size, valueCounts: seenValues };
   });
   const seenRows = new Set();
-  let duplicates = 0;
+  let duplicates = 0, ragged = 0;
   dataRows.forEach(r=>{
+    if(r.length !== headers.length) ragged++;
     const key = r.join('␟');
     if(seenRows.has(key)) duplicates++; else seenRows.add(key);
   });
-  let targetInfo = null;
+  let targetInfo = null, targetMissing = false;
   if(targetCol){
     const idx = headers.findIndex(h => h.trim().toLowerCase() === targetCol.toLowerCase());
     if(idx>-1){
@@ -2450,15 +2758,18 @@ function analyzeCsvText(text, targetCol){
       const majority = entries[0] ? entries[0][1] : 0;
       const minority = entries.length ? entries[entries.length-1][1] : 0;
       targetInfo = { column: headers[idx], classes: entries.slice(0,12), totalClasses: entries.length, imbalanceRatio: minority ? Math.round((majority/minority)*10)/10 : null, total };
-    }
+    } else targetMissing = true;
   }
-  return { headers, rowCount:n, colCount:headers.length, cols, duplicates, targetInfo };
+  return { headers, rowCount:n, colCount:headers.length, cols, duplicates, ragged, delim, targetInfo, targetMissing, targetCol };
 }
+const DELIM_NAMES = {',':'comma', ';':'semicolon', '\t':'tab', '|':'pipe'};
 function renderDatasetStats(out, s, fileName, fileSize){
   out.innerHTML = '';
   const summary = el('div',{class:'result-box'});
   summary.appendChild(el('div',{class:'result-headline', text: fileName + ' — ' + s.rowCount.toLocaleString() + ' rows × ' + s.colCount + ' columns'}));
-  summary.appendChild(el('p',{class:'field-help', text: 'File size ' + Math.round(fileSize/1024).toLocaleString() + ' KB · ' + s.duplicates + ' exact duplicate row' + (s.duplicates===1?'':'s') + ' found.'}));
+  summary.appendChild(el('p',{class:'field-help', text: 'File size ' + fmtBytes(fileSize) + ' · ' + (DELIM_NAMES[s.delim]||'comma') + '-separated · ' + s.duplicates + ' exact duplicate row' + (s.duplicates===1?'':'s') + ' found.'}));
+  if(s.rowCount === 0) summary.appendChild(el('p',{class:'warn-note', text:'No data rows found below the header row.'}));
+  if(s.ragged) summary.appendChild(el('p',{class:'warn-note', text: s.ragged + ' row' + (s.ragged===1?' has':'s have') + ' a different number of fields than the header — usually an unquoted delimiter inside a value, or a truncated line.'}));
   out.appendChild(summary);
 
   const tableWrap = el('div',{class:'matrix-table-wrap', style:'margin-top:12px;'});
@@ -2479,8 +2790,9 @@ function renderDatasetStats(out, s, fileName, fileSize){
     const box = el('div',{class:'card', style:'margin-top:12px;'});
     box.appendChild(el('h4',{class:'section-title', text:'Class balance — ' + t.column}));
     if(t.imbalanceRatio!=null){
-      box.appendChild(el('p',{class:'field-help', text:'Majority:minority ratio ≈ ' + t.imbalanceRatio + ':1 across ' + t.totalClasses + ' distinct value' + (t.totalClasses===1?'':'s') + '. Ratios above roughly 4:1 are usually worth addressing — resampling, class weights, or a metric other than accuracy.'}));
+      box.appendChild(el('p',{class:'field-help', text:'Majority:minority ratio ≈ ' + t.imbalanceRatio + ':1 across ' + t.totalClasses + ' distinct value' + (t.totalClasses===1?'':'s') + '. Ratios beyond roughly 3–4:1 are usually worth addressing — resampling, class weights, or a metric other than accuracy.'}));
     }
+    if(t.totalClasses > 20) box.appendChild(el('p',{class:'warn-note', text:'This column has ' + t.totalClasses + ' distinct values — it looks continuous or ID-like, so read this as a sanity check rather than class balance (only the 12 most frequent are shown).'}));
     t.classes.forEach(entry=>{
       const val = entry[0], count = entry[1];
       const pct = t.total ? Math.round(count/t.total*1000)/10 : 0;
@@ -2493,13 +2805,28 @@ function renderDatasetStats(out, s, fileName, fileSize){
       box.appendChild(row);
     });
     out.appendChild(box);
+  } else if(s.targetMissing){
+    out.appendChild(el('p',{class:'warn-note', style:'margin-top:8px;', text:'No column named "' + s.targetCol + '" in this file. Columns found: ' + s.headers.slice(0,15).join(', ') + (s.headers.length > 15 ? ', …' : '') + '.'}));
   } else {
-    out.appendChild(el('p',{class:'field-help', style:'margin-top:8px;', text:'Add a target/label column name above and re-upload to see its class balance.'}));
+    out.appendChild(el('p',{class:'field-help', style:'margin-top:8px;', text:'Type a target/label column name above to see its class balance.'}));
   }
   out.appendChild(el('p',{class:'field-help', style:'margin-top:10px;', text:'A quick first pass, not a full data-quality audit — it doesn\'t check for label leakage, statistical outliers, or personally identifiable information. Review the actual values for anything sensitive before sharing the file further.'}));
 }
 
 /* ---- 3. Research gap finder ---- */
+function buildGapPrompt(items, human){
+  const numbered = items.map((t,i)=> (i+1) + '. ' + t).join('\n');
+  const head = 'You are analysing a researcher\'s reading list to surface POSSIBLE research gaps. Reason ONLY over the numbered list below — never invent papers, authors or findings outside it, and never claim a gap exists in "the literature" generally, only within this list.\n\nREADING LIST:\n' + numbered + '\n\n';
+  if(human) return head + 'Return up to 6 possible gaps as a numbered list. For each give: the gap (one specific sentence); the evidence (which numbered items motivate it and why, e.g. "Items 2, 5 and 9 all use static graphs; none model temporal edges"); a confidence level (High, Medium or Low — based only on how many list items support it and how directly, not your general knowledge); and a type (Methodological, Dataset, Comparison, Reproducibility or Other).';
+  return head + 'Return ONLY a JSON array of up to 6 objects, each: {"gap": string (one specific sentence), "evidence": string (which numbered items motivate this and why, e.g. "Items 2, 5 and 9 all use static graphs; none model temporal edges"), "confidence": "High"|"Medium"|"Low", "type": "Methodological"|"Dataset"|"Comparison"|"Reproducibility"|"Other"}. Confidence should reflect how many list items support the gap and how directly — not your general knowledge.';
+}
+function gapItemsOrToast(){
+  const raw = ($('#arGapInput').value||'').trim();
+  if(!raw){ showToast('Paste a reading list first'); return null; }
+  const items = raw.split('\n').map(s=>s.trim()).filter(Boolean);
+  if(items.length < 3){ showToast('Paste at least 3 papers for this to be meaningful'); return null; }
+  return items;
+}
 function renderArenaGaps(body){
   const wrap = el('div',{class:'stack'});
   wrap.appendChild(el('div',{class:'evidence-note', html:'<strong>How to read this: </strong>the AI only reasons over the papers you paste below — it has no access to the wider literature, so a "gap" here means "not covered by what you gave it," not "not covered anywhere." Treat every result as a lead to verify, not a finding to cite.'}));
@@ -2508,29 +2835,27 @@ function renderArenaGaps(body){
     el('h3',{class:'section-title', text:'Paste your reading list'}),
     el('p',{class:'field-help', text:'One paper per line: title alone, or title plus a sentence on its method/finding. 8–40 papers works best.'})
   ]));
-  const ta = el('textarea',{id:'arGapInput', rows:'8', placeholder:'e.g.\nZhang et al. 2022 — GCN for card-fraud detection on a single static graph\nLi et al. 2023 — GraphSAGE with temporal edges, outperforms GCN on recall\n...'});
+  const ta = el('textarea',{id:'arGapInput', rows:'8', 'aria-label':'Reading list, one paper per line', placeholder:'e.g.\nZhang et al. 2022 — GCN for card-fraud detection on a single static graph\nLi et al. 2023 — GraphSAGE with temporal edges, outperforms GCN on recall\n...'});
   ta.value = state.arena.gapText || '';
   ta.addEventListener('input', ()=>{ state.arena.gapText = ta.value; saveState(); });
   card.appendChild(ta);
   const btn = el('button',{type:'button', class:'btn ai', id:'arGapBtn', hidden:'true', html: svgIcon('sparkle') + '<span>Find gaps in these papers</span>'});
   btn.addEventListener('click', runArenaGapFinder);
-  card.appendChild(el('div',{class:'btn-row'},[btn]));
+  const copyBtn = aiFallbackButton('', ()=>{ const items = gapItemsOrToast(); if(items) copyAiPrompt(buildGapPrompt(items, true)); }, 'arGapCopyBtn');
+  card.appendChild(el('div',{class:'btn-row'},[btn, copyBtn]));
+  card.appendChild(el('p',{class:'field-help ai-fallback', hidden:'true', text:'On the public site this copies a numbered, evidence-only prompt built from your list — paste it into any AI assistant and verify each gap against the papers themselves.'}));
   wrap.appendChild(card);
   wrap.appendChild(el('div',{class:'stack', id:'arGapOut', style:'gap:10px;'}));
   body.appendChild(wrap);
 }
 async function runArenaGapFinder(){
-  const raw = $('#arGapInput').value.trim();
+  const items = gapItemsOrToast();
+  if(!items) return;
   const btn = $('#arGapBtn');
   const out = $('#arGapOut');
-  if(!raw){ showToast('Paste a reading list first'); return; }
-  const items = raw.split('\n').map(s=>s.trim()).filter(Boolean);
-  if(items.length < 3){ showToast('Paste at least a few papers for this to be meaningful'); return; }
   btn.disabled = true;
   out.innerHTML = '<p class="field-help">Thinking…</p>';
-  const numbered = items.map((t,i)=> (i+1) + '. ' + t).join('\n');
-  const prompt = 'You are analysing a researcher\'s reading list to surface POSSIBLE research gaps. Reason ONLY over the numbered list below — never invent papers, authors or findings outside it, and never claim a gap exists in "the literature" generally, only within this list.\n\nREADING LIST:\n' + numbered + '\n\nReturn ONLY a JSON array of up to 6 objects, each: {"gap": string (one specific sentence), "evidence": string (which numbered items motivate this and why, e.g. "Items 2, 5 and 9 all use static graphs; none model temporal edges"), "confidence": "High"|"Medium"|"Low", "type": "Methodological"|"Dataset"|"Comparison"|"Reproducibility"|"Other"}. Confidence should reflect how many list items support the gap and how directly — not your general knowledge.';
-  const gaps = await runAiJson(prompt, {modelTier:'complex'});
+  const gaps = await runAiJson(buildGapPrompt(items, false), {modelTier:'complex'});
   btn.disabled = false;
   out.innerHTML = '';
   if(!Array.isArray(gaps) || !gaps.length){
@@ -2554,22 +2879,24 @@ async function runArenaGapFinder(){
 /* ---- 4. Citation generator ---- */
 function renderArenaCitations(body){
   const wrap = el('div',{class:'stack'});
-  const mk = (id,label,tag,rows)=>{
+  const mk = (id,label,tag,rows,ph)=>{
     const d = el('div');
     d.appendChild(el('label',{class:'field-label', for:id, text:label}));
-    d.appendChild(tag==='textarea' ? el('textarea',{id:id, rows:String(rows||2)}) : el('input',{type:'text', id:id}));
+    const attrs = tag==='textarea' ? {id:id, rows:String(rows||2)} : {type:'text', id:id};
+    if(ph) attrs.placeholder = ph;
+    d.appendChild(el(tag==='textarea' ? 'textarea' : 'input', attrs));
     return d;
   };
   wrap.appendChild(el('div',{class:'card grid cols-2'},[
     mk('arcTitle','Title'),
-    mk('arcAuthors','Authors (one per line, "Last, First")','textarea',2),
+    mk('arcAuthors','Authors (one per line, "Last, First")','textarea',2,'e.g. Smith, John\nDoe, Anne'),
     mk('arcYear','Year'),
     mk('arcVenue','Journal / conference'),
-    mk('arcVip','Volume, issue, pages (optional)'),
-    mk('arcDoi','DOI or URL')
+    mk('arcVip','Volume, issue, pages (optional)', null, null, 'e.g. 12(3), 45-67'),
+    mk('arcDoi','DOI or URL', null, null, 'e.g. 10.1145/1234567 or https://…')
   ]));
   wrap.appendChild(el('div',{class:'note', html: infoIconSvg() + '<p>Missing a field? Look the work up on <a href="https://search.crossref.org/" target="_blank" rel="noopener">Crossref</a>, or open its DOI directly at <span class="mono">doi.org/&lt;doi&gt;</span>, and copy the metadata across.</p>'}));
-  const genBtn = el('button',{class:'btn primary', type:'button', text:'Generate citations'});
+  const genBtn = el('button',{class:'btn primary', type:'button', id:'arcGenBtn', text:'Generate citations'});
   genBtn.addEventListener('click', generateArenaCitations);
   wrap.appendChild(el('div',{class:'btn-row'},[genBtn]));
   wrap.appendChild(el('div',{class:'stack', id:'arcOut', style:'gap:10px;'}));
@@ -2577,13 +2904,20 @@ function renderArenaCitations(body){
 }
 function joinWithConjunction(list, word){
   if(list.length<=1) return list.join('');
+  if(list.length===2) return list[0] + ' ' + word + ' ' + list[1];
   return list.slice(0,-1).join(', ') + ', ' + word + ' ' + list[list.length-1];
+}
+/** Join names with a style-specific separator before the last one: `two` for exactly two names, `many` for 3+. */
+function listJoin(list, two, many){
+  if(list.length <= 1) return list.join('');
+  if(list.length === 2) return list[0] + two + list[1];
+  return list.slice(0,-1).join(', ') + many + list[list.length-1];
 }
 function parseAuthorLines(raw){
   return String(raw||'').split('\n').map(s=>s.trim()).filter(Boolean).map(line=>{
     if(line.includes(',')){
       const parts = line.split(',');
-      return {last:(parts[0]||'').trim(), first:(parts[1]||'').trim()};
+      return {last:(parts[0]||'').trim(), first:(parts.slice(1).join(',')||'').trim()};
     }
     const parts = line.split(/\s+/);
     const last = parts.pop() || '';
@@ -2591,6 +2925,25 @@ function parseAuthorLines(raw){
   });
 }
 function initials(first){ return String(first||'').split(/\s+/).filter(Boolean).map(p=>p[0].toUpperCase()+'.').join(' '); }
+function stripEndDot(s){ return String(s||'').trim().replace(/[.\s]+$/,''); }
+function withEnd(s){ s = String(s||'').trim(); return !s ? s : (/[.?!]$/.test(s) ? s : s + '.'); }
+/** Accepts "10.x/y", "doi:10.x/y", "https://doi.org/10.x/y" (→ a DOI) or any other URL (→ a plain link). */
+function normalizeDoi(raw){
+  const s = String(raw||'').trim();
+  if(!s) return {doi:'', url:''};
+  const m = s.match(/^(?:(?:https?:\/\/)?(?:dx\.)?doi\.org\/|doi:\s*)(10\..+)$/i) || s.match(/^(10\.\d{4,9}\/\S+)$/);
+  if(m) return {doi:m[1], url:'https://doi.org/' + m[1]};
+  return {doi:'', url:s};
+}
+/** Best-effort split of "12(3), 45-67" / "vol. 12, no. 3, pp. 45–67" into volume / issue / pages for BibTeX & RIS. */
+function parseVip(vip){
+  const s = String(vip||'').trim();
+  const pg = s.match(/(?:pp?\.?\s*)?(\d+)\s*[-–]\s*(\d+)\s*$/) || s.match(/pp?\.?\s*(\d+)\s*$/) || [];
+  const rest = pg.index !== undefined ? s.slice(0, pg.index) : s;
+  const vol = (rest.match(/^\s*(?:vol(?:ume)?\.?\s*)?(\d+)/i) || [])[1] || '';
+  const iss = (rest.match(/\(([^)]+)\)/) || rest.match(/no\.?\s*(\d+)/i) || [])[1] || '';
+  return {volume:vol, issue:iss, pageStart:pg[1]||'', pageEnd:pg[2]||''};
+}
 function generateArenaCitations(){
   const f = {
     title: $('#arcTitle').value.trim(),
@@ -2608,39 +2961,89 @@ function generateArenaCitations(){
     const card = el('div',{class:'card'});
     const head = el('div',{style:'display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:6px;'});
     head.appendChild(el('span',{class:'section-title', style:'font-size:13.5px;', text:name}));
-    const copyBtn = el('button',{class:'btn sm ghost', type:'button', html:svgIcon('copy')});
+    const copyBtn = el('button',{class:'btn sm ghost', type:'button', 'aria-label':'Copy ' + name + ' citation', html:svgIcon('copy')});
     copyBtn.addEventListener('click', ()=> copyText(styles[name], name));
     head.appendChild(copyBtn);
     card.appendChild(head);
     card.appendChild(el('p',{class:'mono', style:'font-size:12.6px; white-space:pre-wrap; color:var(--ink-soft);', text:styles[name]}));
     out.appendChild(card);
   });
-  out.appendChild(el('p',{class:'field-help', style:'margin-top:4px;', text:'Generated from the fields you entered — double-check author-name formatting and punctuation against your target style guide before submitting.'}));
+  const missing = [!f.authors.length && 'authors', !f.year && 'year', !f.venue && 'journal/conference'].filter(Boolean);
+  out.appendChild(el('p',{class:'field-help', style:'margin-top:4px;', text:(missing.length ? 'Missing ' + missing.join(', ') + ' — the styles above fall back to each guide\'s rule (e.g. "n.d." for no date). ' : '') + 'Plain text can\'t carry italics, so italicise the journal/venue name where your style requires it, and double-check against your target style guide before submitting.'}));
 }
 function buildCitationStyles(f){
   const authors = f.authors;
-  const doiUrl = f.doi ? (f.doi.indexOf('http')===0 ? f.doi : 'https://doi.org/'+f.doi.replace(/^doi:/i,'')) : '';
-  const apaAuthors = joinWithConjunction(authors.map(a => a.last + (a.first ? ', ' + initials(a.first) : '')), '&');
-  const ieeeAuthors = authors.map(a => (a.first?initials(a.first)+' ':'') + a.last).join(', ');
-  const harvardAuthors = joinWithConjunction(authors.map(a => a.last + (a.first? ', '+initials(a.first) : '')), 'and');
-  const vancouverAuthors = authors.map(a => a.last + ' ' + String(a.first||'').split(/\s+/).filter(Boolean).map(p=>p[0]).join('')).join(', ');
-  const mlaFirst = authors[0] ? authors[0].last + (authors[0].first? ', '+authors[0].first : '') : '';
-  const chicagoAuthors = authors.map(a => a.last + (a.first? ', '+a.first : '')).join(', ');
+  const d = normalizeDoi(f.doi);
+  const yr = f.year || 'n.d.';
+  const title = stripEndDot(f.title);
+  const src = [f.venue, f.vip].filter(Boolean).join(', ');
+  const inverted = a => a.last + (a.first ? ', ' + a.first : '');
+  const natural = a => (a.first ? a.first + ' ' : '') + a.last;
 
-  const apa = apaAuthors + (f.year? ' ('+f.year+').' : '') + ' ' + f.title + '.' + (f.venue? ' '+f.venue+'.' : '') + (f.vip? ' '+f.vip+'.' : '') + (doiUrl? ' '+doiUrl : '');
-  const ieee = '[1] ' + ieeeAuthors + (f.title? ', "'+f.title+'",' : '') + (f.venue? ' '+f.venue+',' : '') + (f.vip? ' '+f.vip+',' : '') + (f.year? ' '+f.year+'.' : '') + (doiUrl? ' '+doiUrl : '');
-  const harvard = harvardAuthors + (f.year? ' ('+f.year+')' : '') + ' ' + f.title + '.' + (f.venue? ' '+f.venue+',' : '') + (f.vip? ' '+f.vip+'.' : '') + (doiUrl? ' Available at: '+doiUrl+'.' : '');
-  const vancouver = vancouverAuthors + '. ' + f.title + '. ' + (f.venue? f.venue+'. ' : '') + (f.year? f.year+';' : '') + (f.vip? f.vip+'.' : '') + (doiUrl? ' '+doiUrl : '');
-  const mla = mlaFirst + (authors.length>1? ', et al.' : '.') + ' "' + f.title + '." ' + (f.venue? f.venue+', ' : '') + (f.vip? f.vip+', ' : '') + (f.year? f.year+'.' : '') + (doiUrl? ' '+doiUrl+'.' : '');
-  const chicago = chicagoAuthors + '. "' + f.title + '." ' + (f.venue? f.venue+' ' : '') + (f.vip? f.vip+' ' : '') + (f.year? '('+f.year+').' : '') + (doiUrl? ' '+doiUrl+'.' : '');
+  // APA 7: Smith, J., & Doe, A. (2023). Title. Journal, 12(3), 45–67. https://doi.org/…
+  const apaAuth = listJoin(authors.map(a => a.last + (a.first ? ', ' + initials(a.first) : '')), ', & ', ', & ');
+  let apa = apaAuth ? withEnd(apaAuth) + ' (' + yr + '). ' + withEnd(title) : withEnd(title) + ' (' + yr + ').';
+  if(src) apa += ' ' + src + '.';
+  if(d.url) apa += ' ' + d.url;
 
-  const bibKey = ((authors[0]&&authors[0].last)||'ref').replace(/[^A-Za-z0-9]/g,'') + (f.year||'');
-  const bibtex = '@article{'+bibKey+',\n  title={'+f.title+'},\n  author={'+authors.map(a=>a.last+(a.first?', '+a.first:'')).join(' and ')+'},\n  journal={'+f.venue+'},\n  year={'+f.year+'},\n'+(f.doi? '  doi={'+f.doi.replace(/^https?:\/\/doi\.org\//i,'')+'},\n' : '')+'}';
+  // IEEE: J. Smith and A. Doe, "Title," Journal, 12(3), 45–67, 2023, doi: 10.…
+  const ieeeAuth = listJoin(authors.map(a => (a.first ? initials(a.first) + ' ' : '') + a.last), ' and ', ', and ');
+  const qTitle = /[?!]$/.test(title) ? '"' + title + '"' : '"' + title + ',"';
+  let ieee = '[1] ' + (ieeeAuth ? ieeeAuth + ', ' : '') + qTitle + ' ' + [f.venue, f.vip, f.year || 'n.d.'].filter(Boolean).join(', ');
+  ieee += d.doi ? ', doi: ' + d.doi + '.' : (d.url ? '. [Online]. Available: ' + d.url : '.');
 
-  const risLines = ['TY  - JOUR','TI  - '+f.title].concat(authors.map(a=>'AU  - '+a.last+(a.first?', '+a.first:'')));
-  if(f.venue) risLines.push('JO  - '+f.venue);
-  if(f.year) risLines.push('PY  - '+f.year);
-  if(f.doi) risLines.push('DO  - '+f.doi.replace(/^https?:\/\/doi\.org\//i,''));
+  // Harvard (Cite Them Right): Smith, J. and Doe, A. (2023) 'Title', Journal, 12(3), 45–67. Available at: …
+  const harvAuth = listJoin(authors.map(a => a.last + (a.first ? ', ' + initials(a.first) : '')), ' and ', ' and ');
+  let harvard = harvAuth ? harvAuth + ' (' + yr + ') \'' + title + '\'' : '\'' + title + '\' (' + yr + ')';
+  harvard += (src ? ', ' + src : '') + '.';
+  if(d.url) harvard += ' Available at: ' + d.url + '.';
+
+  // Vancouver: Smith J, Doe A. Title. Journal. 2023;12(3), 45–67. doi:10.…
+  const vanAuth = authors.slice(0,6).map(a => a.last + (a.first ? ' ' + String(a.first).split(/[\s-]+/).filter(Boolean).map(p=>p[0].toUpperCase()).join('') : '')).join(', ') + (authors.length > 6 ? ', et al' : '');
+  const vanParts = [];
+  if(vanAuth) vanParts.push(vanAuth + '.');
+  vanParts.push(withEnd(title));
+  if(f.venue) vanParts.push(withEnd(f.venue));
+  if(f.year || f.vip) vanParts.push((f.year || '') + (f.vip ? (f.year ? ';' : '') + f.vip : '') + '.');
+  if(d.doi) vanParts.push('doi:' + d.doi); else if(d.url) vanParts.push('Available from: ' + d.url);
+  const vancouver = vanParts.join(' ');
+
+  // MLA 9: one author "Last, First."; two "Last, First, and First Last."; three+ "Last, First, et al."
+  let mlaAuth = '';
+  if(authors.length === 1) mlaAuth = inverted(authors[0]);
+  else if(authors.length === 2) mlaAuth = inverted(authors[0]) + ', and ' + natural(authors[1]);
+  else if(authors.length > 2) mlaAuth = inverted(authors[0]) + ', et al';
+  const mlaTail = [f.venue, f.vip, f.year, d.url].filter(Boolean).join(', ');
+  const mla = (mlaAuth ? withEnd(mlaAuth) + ' ' : '') + '"' + withEnd(title) + '"' + (mlaTail ? ' ' + mlaTail + '.' : '');
+
+  // Chicago author-date: Smith, John, and Anne Doe. 2023. "Title." Journal 12(3), 45–67. https://doi.org/…
+  const chiAuth = listJoin(authors.map((a,i) => i===0 ? inverted(a) : natural(a)), ', and ', ', and ');
+  const chiSrc = f.venue ? f.venue + (f.vip ? ' ' + f.vip : '') : f.vip;
+  let chicago = chiAuth ? withEnd(chiAuth) + ' ' + yr + '. "' + withEnd(title) + '"' : '"' + withEnd(title) + '" ' + yr + '.';
+  if(chiSrc) chicago += ' ' + chiSrc + '.';
+  if(d.url) chicago += ' ' + d.url + '.';
+
+  // BibTeX / RIS: omit empty fields; conference venues become @inproceedings / CONF.
+  const isConf = /conference|proceedings|workshop|symposium|\bconf\b/i.test(f.venue);
+  const v = parseVip(f.vip);
+  const firstTitleWord = (title.toLowerCase().match(/[a-z0-9]+/) || ['ref'])[0];
+  const bibKey = (((authors[0]&&authors[0].last)||'ref').replace(/[^A-Za-z0-9]/g,'') + (f.year||'') + firstTitleWord).replace(/^$/, 'ref');
+  const bibFields = [
+    ['title', title], ['author', authors.map(inverted).join(' and ')], [isConf ? 'booktitle' : 'journal', f.venue], ['year', f.year],
+    ['volume', v.volume], ['number', v.issue], ['pages', v.pageStart ? v.pageStart + (v.pageEnd ? '--' + v.pageEnd : '') : ''],
+    ['doi', d.doi], ['url', d.doi ? '' : d.url]
+  ].filter(p => p[1]);
+  const bibEsc = t => String(t).replace(/([&%$#_])/g, '\\$1'); // LaTeX specials; url/doi fields are left verbatim
+  const bibtex = '@' + (isConf ? 'inproceedings' : 'article') + '{' + bibKey + ',\n' + bibFields.map(p => '  ' + p[0] + '={' + ((p[0]==='url' || p[0]==='doi') ? p[1] : bibEsc(p[1])) + '}').join(',\n') + '\n}';
+
+  const risLines = ['TY  - ' + (isConf ? 'CONF' : 'JOUR'), 'TI  - ' + title].concat(authors.map(a=>'AU  - ' + inverted(a)));
+  if(f.venue) risLines.push((isConf ? 'T2  - ' : 'JO  - ') + f.venue);
+  if(f.year) risLines.push('PY  - ' + f.year);
+  if(v.volume) risLines.push('VL  - ' + v.volume);
+  if(v.issue) risLines.push('IS  - ' + v.issue);
+  if(v.pageStart) risLines.push('SP  - ' + v.pageStart);
+  if(v.pageEnd) risLines.push('EP  - ' + v.pageEnd);
+  if(d.doi) risLines.push('DO  - ' + d.doi); else if(d.url) risLines.push('UR  - ' + d.url);
   risLines.push('ER  - ');
   const ris = risLines.join('\n');
 
@@ -2670,14 +3073,14 @@ function renderArenaCompute(body){
     el('p',{class:'field-help', text:'A back-of-envelope estimate from parameter count and precision — actual usage also depends on batch size, sequence length and framework overhead, often by 20–50%.'})
   ]));
   const vramRow = el('div',{class:'grid cols-3'});
-  const params = el('input',{type:'text', id:'arVramParams', placeholder:'Parameters (billions), e.g. 7'});
-  const prec = el('select',{id:'arVramPrecision'});
+  const params = el('input',{type:'text', id:'arVramParams', 'aria-label':'Model parameters', placeholder:'Parameters, e.g. 7B, 350M or 7'});
+  const prec = el('select',{id:'arVramPrecision', 'aria-label':'Precision'});
   [['fp32','fp32 (4 bytes/param)'],['fp16','fp16 / bf16 (2 bytes/param)'],['int8','int8 (1 byte/param)']].forEach(p=> prec.appendChild(el('option',{value:p[0],text:p[1]})));
-  const mode = el('select',{id:'arVramMode'});
+  const mode = el('select',{id:'arVramMode', 'aria-label':'Workload'});
   [['inference','Inference only'],['training','Training (Adam, full fine-tune)']].forEach(m=> mode.appendChild(el('option',{value:m[0],text:m[1]})));
   vramRow.appendChild(params); vramRow.appendChild(prec); vramRow.appendChild(mode);
   vramCard.appendChild(vramRow);
-  const vramBtn = el('button',{class:'btn primary', type:'button', text:'Estimate VRAM', style:'align-self:flex-start;'});
+  const vramBtn = el('button',{class:'btn primary', type:'button', id:'arVramBtn', text:'Estimate VRAM', style:'align-self:flex-start;'});
   vramBtn.addEventListener('click', runVramEstimate);
   vramCard.appendChild(el('div',{class:'btn-row'},[vramBtn]));
   vramCard.appendChild(el('div',{id:'arVramOut'}));
@@ -2689,9 +3092,9 @@ function renderArenaCompute(body){
     el('p',{class:'field-help', text:'Enter the GPU-hours your experiment needs and the real hourly rate quoted to you right now — this multiplies them, nothing more, so the number is only ever as current as the rate you typed in.'})
   ]));
   const costRow = el('div',{class:'grid cols-3'});
-  const hoursInp = el('input',{type:'text', id:'arCostHours', placeholder:'GPU-hours, e.g. 14'});
-  const rateInp = el('input',{type:'text', id:'arCostRate', placeholder:'$ per hour, e.g. 1.10'});
-  const costBtn = el('button',{class:'btn primary', type:'button', text:'Calculate'});
+  const hoursInp = el('input',{type:'text', id:'arCostHours', 'aria-label':'GPU-hours', placeholder:'GPU-hours, e.g. 14'});
+  const rateInp = el('input',{type:'text', id:'arCostRate', 'aria-label':'Hourly rate', placeholder:'Rate per hour, e.g. 1.10 or $1.10'});
+  const costBtn = el('button',{class:'btn primary', type:'button', id:'arCostBtn', text:'Calculate'});
   costBtn.addEventListener('click', runComputeCost);
   costRow.appendChild(hoursInp); costRow.appendChild(rateInp); costRow.appendChild(costBtn);
   costCard.appendChild(costRow);
@@ -2701,34 +3104,89 @@ function renderArenaCompute(body){
   body.appendChild(wrap);
   renderResourceCards($('#arComputeProviders'), RESOURCES.filter(r=>r.cat==='compute'));
 }
+/** "7", "7B", "350M", "1.5t", "7,000M" → billions of parameters. */
+function parseParamsBillions(raw){
+  const s = String(raw||'').trim().toLowerCase().replace(/,/g,'');
+  const m = /^([0-9]*\.?[0-9]+)\s*([kmbt])?/.exec(s);
+  if(!m) return NaN;
+  let v = parseFloat(m[1]);
+  if(m[2]==='k') v /= 1e6; else if(m[2]==='m') v /= 1e3; else if(m[2]==='t') v *= 1e3;
+  else if(!m[2] && v >= 1e4) v /= 1e9; // "125000000" is a raw parameter count, not 125 million billion
+  return v;
+}
+const GPU_FIT = [
+  {gb:16, label:'a single 16 GB GPU (e.g. T4)'},
+  {gb:24, label:'a single 24 GB GPU (e.g. L4 or A10)'},
+  {gb:40, label:'a single 40 GB A100'},
+  {gb:80, label:'a single 80 GB GPU (A100 80 GB or H100)'},
+  {gb:141, label:'a single 141 GB H200'},
+  {gb:180, label:'a single Blackwell-class GPU (B200, 180 GB+)'}
+];
+function gpuFitText(gb){
+  const fit = GPU_FIT.find(t => gb <= t.gb);
+  if(fit) return 'Smallest common tier that fits: ' + fit.label + '.';
+  return 'Larger than any single GPU — plan for about ' + Math.ceil(gb/80) + ' × 80 GB GPUs with sharding (FSDP / DeepSpeed ZeRO) or tensor parallelism.';
+}
 function runVramEstimate(){
-  const paramsB = parseFloat($('#arVramParams').value);
+  const paramsB = parseParamsBillions($('#arVramParams').value);
   const out = $('#arVramOut');
-  if(!paramsB || paramsB<=0){ out.innerHTML = '<p class="field-help">Enter a parameter count first.</p>'; return; }
-  const bytesPer = {fp32:4, fp16:2, int8:1}[$('#arVramPrecision').value] || 2;
+  if(!paramsB || !isFinite(paramsB) || paramsB <= 0){ out.innerHTML = '<p class="field-help">Enter a parameter count first — e.g. 7B, 350M, or just 7 (billions).</p>'; return; }
+  const prec = $('#arVramPrecision').value;
+  const bytesPer = {fp32:4, fp16:2, int8:1}[prec] || 2;
   const mode = $('#arVramMode').value;
-  const paramsBytes = paramsB * 1e9 * bytesPer;
-  const estBytes = mode==='training' ? paramsBytes * 4 * 1.2 : paramsBytes * 1.2;
-  const gb = estBytes / 1e9;
+  const P = paramsB * 1e9;
+  const GB = b => b / 1e9;
+  const fmt = x => x >= 10 ? Math.round(x).toLocaleString() : String(Math.round(x*10)/10);
   out.innerHTML = '';
   const box = el('div',{class:'result-box'});
-  box.appendChild(el('div',{class:'result-headline', text:'≈ ' + Math.ceil(gb) + ' GB VRAM'}));
-  box.appendChild(el('p',{class:'field-help', text: mode==='training' ? 'Rough full-fine-tune estimate (weights + gradients + Adam optimizer states + activation headroom). LoRA/QLoRA or gradient checkpointing can cut this substantially.' : 'Rough inference estimate (weights + activation/KV-cache headroom) for a single request at moderate batch size.'}));
+  if(mode === 'training' && prec === 'int8'){
+    const ref = Math.ceil(GB(P * 16 * 1.2));
+    box.appendChild(el('div',{class:'result-headline', text:'int8 isn\'t a full fine-tuning format'}));
+    box.appendChild(el('p',{class:'field-help', text:'int8 is an inference / quantisation format. A full fine-tune keeps weights, gradients and Adam optimizer states in higher precision — about 16 bytes per parameter, ≈ ' + ref.toLocaleString() + ' GB for this model with activation headroom. For low-memory training, freeze an 8- or 4-bit quantised base and train small adapters with LoRA / QLoRA instead.'}));
+    out.appendChild(box);
+    return;
+  }
+  let total, breakdown;
+  if(mode === 'training'){
+    // Full fine-tune with Adam ≈ 16 bytes/parameter either way (cf. the ZeRO paper's accounting):
+    //   fp32:             4 weights + 4 gradients + 8 Adam moments
+    //   fp16/bf16 mixed:  2 weights + 2 gradients + 4 fp32 master copy + 8 Adam moments
+    // (The previous ×4 rule was right for fp32 but under-counted mixed precision by half.)
+    const w = P * bytesPer, g = P * bytesPer, opt = P * (prec === 'fp32' ? 8 : 12);
+    total = GB((w + g + opt) * 1.2);
+    breakdown = 'Weights ' + fmt(GB(w)) + ' GB + gradients ' + fmt(GB(g)) + ' GB + optimizer states' + (prec === 'fp32' ? '' : ' incl. fp32 master weights') + ' ' + fmt(GB(opt)) + ' GB, plus ~20% activation headroom.';
+  } else {
+    total = GB(P * bytesPer * 1.2);
+    breakdown = 'Weights ' + fmt(GB(P * bytesPer)) + ' GB, plus ~20% for activations / KV-cache at a single request and moderate context.';
+  }
+  box.appendChild(el('div',{class:'result-headline', text:'≈ ' + Math.ceil(total).toLocaleString() + ' GB VRAM'}));
+  box.appendChild(el('p',{class:'field-help', text: breakdown}));
+  box.appendChild(el('p',{class:'field-help', text: gpuFitText(total)}));
+  box.appendChild(el('p',{class:'field-help', text: mode === 'training' ? 'Rough full-fine-tune estimate with Adam. Activations grow with batch size and sequence length — often well past 20% — while LoRA/QLoRA, gradient checkpointing or ZeRO sharding cut the total substantially.' : 'Long contexts and large batches grow the KV-cache well beyond this; int8 / 4-bit quantised weights shrink it.'}));
   out.appendChild(box);
+}
+/** Tolerates what people actually type: "$1.10", "1,200", "14 h", "A$2.50". */
+function parseLooseNumber(raw){
+  let s = String(raw||'').replace(/\s/g,'');
+  if(/^[^\d-]*-?\d+,\d{1,2}[^\d]*$/.test(s)) s = s.replace(',', '.'); // "€1,10" → 1.10 (decimal comma)
+  const m = /-?\d*\.?\d+/.exec(s.replace(/,/g,''));
+  return m ? parseFloat(m[0]) : NaN;
 }
 function runComputeCost(){
   const hoursRaw = $('#arCostHours').value.trim();
   const rateRaw = $('#arCostRate').value.trim();
-  const hours = parseFloat(hoursRaw);
-  const rate = parseFloat(rateRaw);
+  const hours = parseLooseNumber(hoursRaw);
+  const rate = parseLooseNumber(rateRaw);
   const out = $('#arCostOut');
   if(hoursRaw==='' || rateRaw==='' || isNaN(hours) || isNaN(rate)){ out.innerHTML = '<p class="field-help">Enter both GPU-hours and an hourly rate.</p>'; return; }
   if(hours <= 0){ out.innerHTML = '<p class="field-help">GPU-hours must be greater than zero.</p>'; return; }
   if(rate < 0){ out.innerHTML = '<p class="field-help">Hourly rate can\'t be negative — enter 0 for a free/spot instance.</p>'; return; }
+  const symMatch = /^[^\d.\-\s]+/.exec(rateRaw);
+  const sym = symMatch ? symMatch[0] : '$';
   out.innerHTML = '';
   const box = el('div',{class:'result-box'});
-  box.appendChild(el('div',{class:'result-headline', text:'≈ $' + (hours*rate).toFixed(2)}));
-  box.appendChild(el('p',{class:'field-help', text: hours + ' GPU-hours × $' + rate.toFixed(2) + '/hour. Add a margin for failed runs, debugging and re-training — real usage is rarely exactly the planned figure.'}));
+  box.appendChild(el('div',{class:'result-headline', text:'≈ ' + sym + (hours*rate).toFixed(2)}));
+  box.appendChild(el('p',{class:'field-help', text: hours + ' GPU-hours × ' + sym + rate.toFixed(2) + '/hour. Add a margin for failed runs, debugging and re-training — real usage is rarely exactly the planned figure.'}));
   out.appendChild(box);
 }
 
@@ -2747,16 +3205,16 @@ function renderArenaMetrics(body){
   wrap.appendChild(glossaryCard);
 
   wrap.appendChild(el('h3',{class:'section-title', text:'What to compare against, by task type'}));
-  wrap.appendChild(el('p',{class:'field-help', text:'A starting baseline set per task — real, widely-used models, each linking to a live leaderboard search so you see current reported numbers rather than a fixed figure here.'}));
+  wrap.appendChild(el('p',{class:'field-help', text:'A starting baseline set per task — real, widely-used models, each linking to a live Semantic Scholar search for papers that benchmark it, so you see current reported numbers rather than a fixed figure here.'}));
   BASELINE_SETS.forEach(set=>{
     const card = el('div',{class:'card'});
     card.appendChild(el('h4',{class:'section-title', style:'margin-bottom:8px;', text:set.task}));
     const chips = el('div',{class:'chip-row'});
-    set.models.forEach(m=> chips.appendChild(el('a',{class:'chip', href:'https://paperswithcode.com/search?q='+qs(m), target:'_blank', rel:'noopener', text:m})));
+    set.models.forEach(m=> chips.appendChild(el('a',{class:'chip', href:semanticUrl(m + ' benchmark'), target:'_blank', rel:'noopener', text:m})));
     card.appendChild(chips);
     wrap.appendChild(card);
   });
-  wrap.appendChild(el('p',{class:'field-help', text:'Each chip opens a live Papers With Code search for that model (now part of Hugging Face) — check the specific leaderboard for your dataset before quoting a reported number as your baseline.'}));
+  wrap.appendChild(el('p',{class:'field-help', text:'Each chip opens a live Semantic Scholar search for papers benchmarking that model — check the results reported on your specific dataset before quoting a number as your baseline.'}));
   body.appendChild(wrap);
 }
 
@@ -2782,6 +3240,9 @@ function renderArenaRepro(body){
     list.appendChild(row);
   });
   wrap.appendChild(list);
+  const resetBtn = el('button',{type:'button', class:'btn ghost sm', id:'arReproReset', text:'Clear checklist for the next paper'});
+  resetBtn.addEventListener('click', ()=>{ state.arena.repro = {}; saveState(); switchArenaTool('repro'); const r = $('#arReproReset'); if(r) r.focus(); showToast('Checklist cleared'); });
+  wrap.appendChild(el('div',{class:'btn-row'},[resetBtn]));
 
   wrap.appendChild(el('h3',{class:'section-title', text:'Where these standards come from'}));
   wrap.appendChild(el('div',{class:'grid cols-3'}, OPEN_SCIENCE_REFS.map(r=> makeResourceCard({title:r.name, desc:r.desc, primaryUrl:r.url}))));
@@ -2805,8 +3266,8 @@ function renderArenaStats(body){
   const card = el('div',{class:'card stack'});
   const question = (id, label, opts)=>{
     const d = el('div');
-    d.appendChild(el('label',{class:'field-label', text:label}));
-    const row = el('div',{class:'stat-answer-row', id:id});
+    d.appendChild(el('div',{class:'field-label', id:id + 'Label', text:label}));
+    const row = el('div',{class:'stat-answer-row', id:id, role:'group', 'aria-labelledby':id + 'Label'});
     opts.forEach(o=>{
       const chip = el('button',{type:'button', class:'chip', 'aria-pressed':'false', text:o[1]});
       chip.dataset.val = o[0];
@@ -2820,7 +3281,7 @@ function renderArenaStats(body){
   card.appendChild(question('arStatDesign','Are the groups independent or paired/repeated measures?', [['independent','Independent'],['paired','Paired / repeated measures']]));
   card.appendChild(question('arStatOutcome','What type is your outcome variable?', [['continuous','Continuous'],['categorical','Categorical']]));
   card.appendChild(question('arStatNormal','If continuous — can you reasonably assume a normal distribution?', [['yes','Yes / roughly'],['no','No / unsure']]));
-  const btn = el('button',{class:'btn primary', type:'button', text:'Recommend a test', style:'align-self:flex-start;'});
+  const btn = el('button',{class:'btn primary', type:'button', id:'arStatBtn', text:'Recommend a test', style:'align-self:flex-start;'});
   btn.addEventListener('click', runStatAdvisor);
   card.appendChild(el('div',{class:'btn-row'},[btn]));
   wrap.appendChild(card);
@@ -2869,30 +3330,47 @@ function runStatAdvisor(){
 }
 
 /* ---- 9. Literature matrix builder ---- */
+function buildMatrixPrompt(abstract, human){
+  if(human) return 'Extract one literature-matrix row from this abstract with these fields: Paper (title if identifiable, else a short label), Year, Method, Dataset, Sample/N, Metric, Result, Limitation. Write "not stated" for anything the abstract does not say — never invent a value that isn\'t there. Return it as a one-row Markdown table.\n\nAbstract:\n' + abstract;
+  return 'Extract a literature-matrix row from this abstract. Return ONLY JSON of the shape {"paper":string (title if identifiable, else a short label),"year":string,"method":string,"dataset":string,"n":string,"metric":string,"result":string,"limitation":string}. Use "" for anything not stated in the abstract — never invent a value that isn\'t there.\n\nAbstract:\n' + abstract;
+}
+function matrixHasContent(){ return state.arena.litRows.some(r => MATRIX_COLS.some(c => String(r[c.key]||'').trim())); }
 function renderArenaMatrix(body){
   if(!state.arena.litRows || !state.arena.litRows.length) state.arena.litRows = [newMatrixRow()];
   const wrap = el('div',{class:'stack'});
   wrap.appendChild(el('p',{class:'field-help', text:'Build a literature comparison table by hand, or paste one abstract below and let AI propose a starting row for you to correct — every cell stays editable and nothing is exported until you\'re satisfied with it.'}));
 
   const suggestCard = el('div',{class:'card stack'});
-  suggestCard.appendChild(el('label',{class:'field-label', text:'Paste one abstract to draft a starting row (optional)'}));
+  suggestCard.appendChild(el('label',{class:'field-label', for:'arMatrixAbstract', text:'Paste one abstract to draft a starting row (optional)'}));
   suggestCard.appendChild(el('textarea',{id:'arMatrixAbstract', rows:'3', placeholder:'Paste a title + abstract…'}));
   const suggestBtn = el('button',{type:'button', class:'btn ai', id:'arMatrixSuggestBtn', hidden:'true', html: svgIcon('sparkle') + '<span>Draft a row from this abstract</span>'});
   suggestBtn.addEventListener('click', suggestMatrixRow);
-  suggestCard.appendChild(el('div',{class:'btn-row'},[suggestBtn]));
+  const copyBtn = aiFallbackButton('', ()=>{
+    const abstract = $('#arMatrixAbstract').value.trim();
+    if(!abstract){ showToast('Paste an abstract first'); return; }
+    copyAiPrompt(buildMatrixPrompt(abstract, true));
+  }, 'arMatrixCopyBtn');
+  suggestCard.appendChild(el('div',{class:'btn-row'},[suggestBtn, copyBtn]));
   wrap.appendChild(suggestCard);
 
   const tableWrap = el('div',{class:'matrix-table-wrap'});
   tableWrap.id = 'arMatrixTableWrap';
   wrap.appendChild(tableWrap);
 
-  const addBtn = el('button',{class:'btn', type:'button', text:'+ Add row'});
+  const addBtn = el('button',{class:'btn', type:'button', id:'arMatrixAddBtn', text:'+ Add row'});
   addBtn.addEventListener('click', ()=>{ state.arena.litRows.push(newMatrixRow()); saveState(); renderMatrixTable(); });
-  const copyBtn = el('button',{class:'btn', type:'button', text:'Copy as Markdown table'});
-  copyBtn.addEventListener('click', ()=> copyText(matrixToMarkdown(), 'Literature matrix'));
-  const csvBtn = el('button',{class:'btn primary', type:'button', text:'Export as CSV'});
-  csvBtn.addEventListener('click', ()=> saveOrCopy('literature-matrix.csv', matrixToCsv(), 'Literature matrix'));
-  wrap.appendChild(el('div',{class:'btn-row'},[addBtn, copyBtn, csvBtn]));
+  const mdBtn = el('button',{class:'btn', type:'button', id:'arMatrixMdBtn', text:'Copy as Markdown table'});
+  mdBtn.addEventListener('click', ()=>{
+    if(!matrixHasContent()){ showToast('Add at least one row first — the table is empty'); return; }
+    copyText(matrixToMarkdown(), 'Literature matrix');
+  });
+  const csvBtn = el('button',{class:'btn primary', type:'button', id:'arMatrixCsvBtn', text:'Export as CSV'});
+  csvBtn.addEventListener('click', ()=>{
+    if(!matrixHasContent()){ showToast('Add at least one row first — the table is empty'); return; }
+    // The BOM makes Excel open UTF-8 (en dashes, accents) correctly.
+    saveFile('literature-matrix.csv', '\uFEFF' + matrixToCsv(), 'text/csv;charset=utf-8');
+  });
+  wrap.appendChild(el('div',{class:'btn-row'},[addBtn, mdBtn, csvBtn]));
 
   body.appendChild(wrap);
   renderMatrixTable();
@@ -2910,15 +3388,18 @@ function renderMatrixTable(){
     const tr = el('tr');
     MATRIX_COLS.forEach(c=>{
       const td = el('td');
-      const inp = (c.key==='paper' || c.key==='result' || c.key==='limitation') ? el('textarea',{rows:'2'}) : el('input',{type:'text'});
+      const inp = (c.key==='paper' || c.key==='result' || c.key==='limitation') ? el('textarea',{rows:'2', 'aria-label':c.label + ', row ' + (ri+1)}) : el('input',{type:'text', 'aria-label':c.label + ', row ' + (ri+1)});
       inp.value = row[c.key] || '';
       inp.addEventListener('input', ()=>{ state.arena.litRows[ri][c.key] = inp.value; saveState(); });
       td.appendChild(inp);
       tr.appendChild(td);
     });
     const delTd = el('td');
-    const delBtn = el('button',{class:'btn sm ghost', type:'button', text:'Remove'});
-    delBtn.addEventListener('click', ()=>{ state.arena.litRows.splice(ri,1); if(!state.arena.litRows.length) state.arena.litRows=[newMatrixRow()]; saveState(); renderMatrixTable(); });
+    const delBtn = el('button',{class:'btn sm ghost', type:'button', text:'Remove', 'aria-label':'Remove row ' + (ri+1)});
+    delBtn.addEventListener('click', ()=>{
+      state.arena.litRows.splice(ri,1); if(!state.arena.litRows.length) state.arena.litRows=[newMatrixRow()]; saveState(); renderMatrixTable();
+      const rest = $all('#arMatrixTableWrap button'); const next = rest[Math.min(ri, rest.length-1)] || $('#arMatrixAddBtn'); if(next) next.focus();
+    });
     delTd.appendChild(delBtn);
     tr.appendChild(delTd);
     table.appendChild(tr);
@@ -2928,26 +3409,31 @@ function renderMatrixTable(){
 function matrixToMarkdown(){
   const header = '| ' + MATRIX_COLS.map(c=>c.label).join(' | ') + ' |';
   const sep = '| ' + MATRIX_COLS.map(()=>'---').join(' | ') + ' |';
-  const rows = state.arena.litRows.map(r => '| ' + MATRIX_COLS.map(c => String(r[c.key]||'').replace(/\|/g,'\\|').replace(/\n/g,' ')).join(' | ') + ' |');
+  const rows = state.arena.litRows.map(r => '| ' + MATRIX_COLS.map(c => String(r[c.key]||'').replace(/\|/g,'\\|').replace(/\r?\n/g,' ')).join(' | ') + ' |');
   return [header, sep].concat(rows).join('\n');
 }
-function csvEscape(v){ v = String(v==null?'':v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+function csvEscape(v){
+  v = String(v==null?'':v);
+  if(/^[=+\-@\t\r]/.test(v)) v = "'" + v; // stop spreadsheet apps executing a cell as a formula
+  return /[",\r\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v;
+}
 function matrixToCsv(){
   const header = MATRIX_COLS.map(c=>csvEscape(c.label)).join(',');
   const rows = state.arena.litRows.map(r => MATRIX_COLS.map(c=>csvEscape(r[c.key])).join(','));
-  return [header].concat(rows).join('\n');
+  return [header].concat(rows).join('\r\n');
 }
 async function suggestMatrixRow(){
   const abstract = $('#arMatrixAbstract').value.trim();
   const btn = $('#arMatrixSuggestBtn');
   if(!abstract){ showToast('Paste an abstract first'); return; }
   btn.disabled = true;
-  const prompt = 'Extract a literature-matrix row from this abstract. Return ONLY JSON of the shape {"paper":string (title if identifiable, else a short label),"year":string,"method":string,"dataset":string,"n":string,"metric":string,"result":string,"limitation":string}. Use "" for anything not stated in the abstract — never invent a value that isn\'t there.\n\nAbstract:\n' + abstract;
-  const row = await runAiJson(prompt, {modelTier:'quick'});
+  const row = await runAiJson(buildMatrixPrompt(abstract, false), {modelTier:'quick'});
   btn.disabled = false;
   if(!row){ showToast('Could not extract a row from that abstract'); return; }
   const newRow = newMatrixRow();
   MATRIX_COLS.forEach(c=>{ newRow[c.key] = String(row[c.key]||''); });
+  // Replace the starter blank row instead of leaving an empty first line in the table.
+  if(state.arena.litRows.length === 1 && !MATRIX_COLS.some(c => String(state.arena.litRows[0][c.key]||'').trim())) state.arena.litRows = [];
   state.arena.litRows.push(newRow);
   saveState();
   renderMatrixTable();
@@ -2966,18 +3452,43 @@ const PANEL_RENDERERS = {
   timeline:renderTimelinePanel, library:renderLibraryPanel, arena:renderArenaPanel
 };
 
-function navigate(id){
-  if(!PANEL_RENDERERS[id]) id = 'dashboard';
+const BASE_TITLE = document.title;
+/** Centre the active item in the horizontally-scrolling mobile nav bar so you can always see where you are. */
+function centerActiveNavItem(){
+  const nav = $('#sidenav'), act = nav && $('.navitem.active', nav);
+  if(!nav || !act) return;
+  if(nav.scrollWidth <= nav.clientWidth + 1) return;
+  // On phones Dashboard is pinned to the left edge — keep the active pill clear of it.
+  const pinned = $('.navitem[data-target="dashboard"]', nav);
+  const pinW = (pinned && pinned !== act && getComputedStyle(pinned).position === 'sticky') ? pinned.offsetWidth + 18 : 0;
+  const centred = act.offsetLeft - (nav.clientWidth - act.offsetWidth) / 2;
+  nav.scrollLeft = Math.max(0, pinW ? Math.min(centred, act.offsetLeft - pinW) : centred);
+}
+/** opts.push: a user click → new history entry, so the browser/phone Back button returns to the previous panel
+ *  (replaceState alone meant Back left the site entirely). Initial load and Back/Forward itself only replace. */
+function navigate(id, opts){
+  opts = opts || {};
+  flushProfileAutosave();
+  if(!Object.prototype.hasOwnProperty.call(PANEL_RENDERERS, id)) id = 'dashboard';
   $all('[data-panel]').forEach(p => p.hidden = (p.id !== 'panel-'+id));
-  $all('.navitem').forEach(n => n.classList.toggle('active', n.dataset.target===id));
-  const content = $('#content'); if(content) content.scrollTop = 0;
+  $all('.navitem').forEach(n => {
+    const on = n.dataset.target===id;
+    n.classList.toggle('active', on);
+    if(on) n.setAttribute('aria-current', 'page'); else n.removeAttribute('aria-current');
+  });
   if(location.hash.slice(1) !== id){
-    try{ history.replaceState(null, '', '#'+id); }
+    try{ if(opts.push) history.pushState(null, '', '#'+id); else history.replaceState(null, '', '#'+id); }
     catch(e){ /* some sandboxed/opaque-origin previews disallow history writes — hash sync is best-effort only */ }
   }
   // A failure rendering one panel must never strand navigation itself — log and keep the UI usable.
   try{ PANEL_RENDERERS[id](); }
   catch(e){ console.error('Postgraduate Research Planner: panel render failed for "' + id + '"', e); }
+  // The window scrolls (not .content), so reset it — otherwise a panel opened from the bottom of a long page opens mid-way.
+  try{ window.scrollTo(0, 0); }catch(e){}
+  const content = $('#content'); if(content) content.scrollTop = 0;
+  centerActiveNavItem();
+  const meta = PANELS.find(p => p.id === id);
+  try{ document.title = (meta && id !== 'dashboard') ? meta.label + ' · ' + BASE_TITLE : BASE_TITLE; }catch(e){}
 }
 
 /* ============================================================
@@ -2985,17 +3496,20 @@ function navigate(id){
    ============================================================ */
 
 function wireEvents(){
-  $all('.navitem').forEach(btn => btn.addEventListener('click', ()=> navigate(btn.dataset.target)));
+  $all('.navitem').forEach(btn => btn.addEventListener('click', ()=> navigate(btn.dataset.target, {push:true})));
   document.addEventListener('click', (e)=>{
     const t = e.target.closest('[data-nav]');
-    if(t){ e.preventDefault(); navigate(t.dataset.nav); }
+    if(t){ e.preventDefault(); navigate(t.dataset.nav, {push:true}); }
   });
   window.addEventListener('hashchange', ()=> navigate(location.hash.slice(1) || 'dashboard'));
 
-  // Profile
-  $('#pSaveBtn').addEventListener('click', saveProfileForm);
-  $('#pResetBtn').addEventListener('click', ()=>{
-    if(!confirm('Reset your profile? This clears interests, background and links (proposal drafts and checklist progress are kept).')) return;
+  // Profile — text fields autosave as you type (they used to be lost unless you clicked Save).
+  ['pName','pKeywords','pSkills','pBio','pLinks','pEmail'].forEach(id => $('#'+id).addEventListener('input', scheduleProfileAutosave));
+  ['pStage','pDegree','pStart'].forEach(id => $('#'+id).addEventListener('change', ()=> saveProfileForm({silent:true})));
+  $('#pSaveBtn').addEventListener('click', ()=>{ clearTimeout(profileAutosaveTimer); profileAutosaveTimer = null; saveProfileForm({silent:false}); });
+  $('#pResetBtn').addEventListener('click', async ()=>{
+    if(!(await confirmAction('Reset your profile? This clears interests, background and links (proposal drafts and checklist progress are kept).', 'Reset profile'))) return;
+    clearTimeout(profileAutosaveTimer); profileAutosaveTimer = null;
     state.profile = defaultState().profile;
     saveState(); renderProfilePanel(); renderDashboard();
     $('#pSavedNote').textContent = 'Profile reset';
@@ -3008,13 +3522,22 @@ function wireEvents(){
     const regionMatched = state.profile.regions && state.profile.regions.length;
     if(regionMatched) state.sSel.region = state.profile.regions[0];
     saveState(); renderSupervisorsPanel();
-    showToast(regionMatched ? 'Matched your profile interests & region' : 'Matched your profile interests');
+    showToast(!state.profile.interests.length ? 'Your profile has no interests yet — pick some in My profile' : (regionMatched ? 'Matched your profile interests & region' : 'Matched your profile interests'));
   });
-  $('#rMatchBtn').addEventListener('click', ()=>{ state.rSel.interests = state.profile.interests.slice(); saveState(); renderPapersPanel(); showToast('Matched your profile interests'); });
+  $('#rMatchBtn').addEventListener('click', ()=>{
+    state.rSel.interests = state.profile.interests.slice(); saveState(); renderPapersPanel();
+    showToast(state.profile.interests.length ? 'Matched your profile interests' : 'Your profile has no interests yet — pick some in My profile');
+  });
 
   // Proposal
-  $('#propCopyBtn').addEventListener('click', ()=> copyText(assembleProposalMarkdown(), 'Proposal'));
-  $('#propExportBtn').addEventListener('click', ()=> saveOrCopy('research-proposal-draft.md', assembleProposalMarkdown(), 'Proposal'));
+  $('#propCopyBtn').addEventListener('click', ()=>{
+    if(!proposalHasContent()){ showToast('Nothing written yet — start any section below first'); return; }
+    copyText(assembleProposalMarkdown(), 'Proposal');
+  });
+  $('#propExportBtn').addEventListener('click', ()=>{
+    if(!proposalHasContent()){ showToast('Nothing written yet — start any section below first'); return; }
+    saveFile('research-proposal-draft.md', assembleProposalMarkdown(), 'text/markdown;charset=utf-8');
+  });
 
   // Data export/import
   $('#exportDataBtn').addEventListener('click', exportData);
@@ -3026,14 +3549,13 @@ function wireEvents(){
   });
 
   // Timeline
-  $('#tlTargetDate').addEventListener('change', ()=>{ state.timelineTargetDate = $('#tlTargetDate').value; saveState(); });
+  $('#tlTargetDate').addEventListener('change', ()=>{ state.timelineTargetDate = $('#tlTargetDate').value; saveState(); renderTimelinePanel(); });
   $('#tlIcsBtn').addEventListener('click', ()=>{
     const val = $('#tlTargetDate').value;
     if(!val){ showToast('Pick a target date first'); return; }
     const ics = buildTimelineIcs(val);
     if(!ics){ showToast('That date didn\'t parse — try again'); return; }
-    downloadBlob('phd-application-timeline.ics', ics, 'text/calendar');
-    showToast('Calendar file downloaded — import it into Google/Apple/Outlook Calendar');
+    saveFile('phd-application-timeline.ics', ics, 'text/calendar;charset=utf-8', 'Calendar file saved — import it into Google, Apple or Outlook Calendar');
   });
 
   // Outreach
@@ -3041,63 +3563,107 @@ function wireEvents(){
     $('#'+id).addEventListener('input', saveOutreachForm);
     $('#'+id).addEventListener('change', saveOutreachForm);
   });
-  $('#oGenerateBtn').addEventListener('click', ()=>{
+  $('#oBody').addEventListener('input', updateOutreachWordCount);
+  $('#oGenerateBtn').addEventListener('click', async ()=>{
     saveOutreachForm();
+    const current = $('#oBody').value.trim();
+    if(current && current !== String(state.outreach.lastGen||'').trim()){
+      if(!(await confirmAction('Replace the draft below with a freshly generated one? Edits you made to the current draft will be lost.', 'Replace draft'))) return;
+    }
     const {subject, body} = buildEmail(state.outreach.type, state.outreach, state.profile);
     $('#oSubject').value = subject; $('#oBody').value = body;
+    state.outreach.lastGen = body;
+    saveOutreachForm();
+    updateOutreachWordCount();
     showToast('Draft generated below');
   });
   $('#oPolishBtn').addEventListener('click', async ()=>{
     const body = $('#oBody').value.trim();
     if(!body){ showToast('Generate a draft first'); return; }
-    const prompt = 'Lightly polish the tone and tighten the length of this outreach email. Keep the same structure, facts and ask — do not invent new claims, names or links. Keep it under 220 words. Return only the polished email body: no subject line, no commentary, no markdown.\n\nEmail:\n' + body;
-    await runAi($('#oPolishBtn'), $('#oAiBox'), $('#oAiOut'), prompt, {modelTier:'complex'});
+    await runAi($('#oPolishBtn'), $('#oAiBox'), $('#oAiOut'), buildPolishPrompt(body), {modelTier:'complex'});
+  });
+  $('#oPolishCopyBtn').addEventListener('click', ()=>{
+    const body = $('#oBody').value.trim();
+    if(!body){ showToast('Generate a draft first'); return; }
+    copyAiPrompt(buildPolishPrompt(body));
   });
   $('#oUseAiBtn').addEventListener('click', ()=>{
-    $('#oBody').value = $('#oAiOut').textContent.trim();
+    const polished = $('#oAiOut').textContent.trim();
+    if(!polished){ showToast('Nothing to use yet'); return; }
+    $('#oBody').value = polished;
     saveOutreachForm();
+    updateOutreachWordCount();
     $('#oAiBox').classList.remove('show');
     showToast('Polished version applied');
   });
   $('#oDiscardAiBtn').addEventListener('click', ()=> $('#oAiBox').classList.remove('show'));
-  $('#oCopyBtn').addEventListener('click', ()=> copyText('Subject: ' + $('#oSubject').value + '\n\n' + $('#oBody').value, 'Email'));
-  $('#oDownloadBtn').addEventListener('click', ()=> saveOrCopy('outreach-email.txt', 'Subject: ' + $('#oSubject').value + '\n\n' + $('#oBody').value, 'Email'));
+  $('#oCopyBtn').addEventListener('click', ()=>{
+    const t = outreachEmailText();
+    if(!t){ showToast('Generate or write a draft first'); return; }
+    copyText(t, 'Email');
+  });
+  $('#oDownloadBtn').addEventListener('click', ()=>{
+    const t = outreachEmailText();
+    if(!t){ showToast('Generate or write a draft first'); return; }
+    saveFile('outreach-email.txt', t, 'text/plain;charset=utf-8');
+  });
 
   // CV bullet rewriter
+  const buildCvPrompt = (raw, human) => 'Rewrite this raw achievement or task as 3 short, punchy resume bullet points for an academic/research CV. Each under 20 words, starting with a strong past-tense verb, keeping any concrete numbers, never adding numbers, tools or claims that are not in the original, no first-person pronouns, no markdown. '
+    + (human ? 'Return exactly 3 bullet points, one per line.' : 'Return ONLY a JSON array of exactly 3 strings.') + '\n\nRaw achievement:\n' + raw;
   $('#cvRewriteBtn').addEventListener('click', async ()=>{
     const raw = $('#cvRaw').value.trim();
     const out = $('#cvBulletsOut');
     if(!raw){ showToast('Paste an achievement first'); return; }
     const btn = $('#cvRewriteBtn');
     btn.disabled = true; out.innerHTML = '<span class="field-help">Thinking…</span>';
-    const prompt = 'Rewrite this raw achievement or task as 3 short, punchy resume bullet points for an academic/research CV. Each under 20 words, starting with a strong past-tense verb, keeping any concrete numbers, no first-person pronouns, no markdown. Return ONLY a JSON array of exactly 3 strings.\n\nRaw achievement:\n' + raw;
-    const bullets = await runAiJson(prompt, {modelTier:'complex'});
+    const bullets = await runAiJson(buildCvPrompt(raw, false), {modelTier:'complex'});
     btn.disabled = false; out.innerHTML = '';
     if(!Array.isArray(bullets) || !bullets.length){ out.innerHTML = '<span class="field-help">Could not generate bullets — try rephrasing the achievement.</span>'; return; }
     bullets.forEach(b=>{
       const row = el('div',{style:'display:flex; align-items:flex-start; gap:10px; padding:8px 10px; background:var(--surface-2); border:1px solid var(--line); border-radius:var(--r-s); font-size:13.4px;'});
       row.appendChild(el('span',{text:String(b), style:'flex:1;'}));
-      const cb = el('button',{class:'btn sm ghost', type:'button', html:svgIcon('copy')});
+      const cb = el('button',{class:'btn sm ghost', type:'button', 'aria-label':'Copy this bullet', html:svgIcon('copy')});
       cb.addEventListener('click', ()=> copyText(String(b), 'Bullet'));
       row.appendChild(cb);
       out.appendChild(row);
     });
   });
+  $('#cvRewriteCopyBtn').addEventListener('click', ()=>{
+    const raw = $('#cvRaw').value.trim();
+    if(!raw){ showToast('Paste an achievement first'); return; }
+    copyAiPrompt(buildCvPrompt(raw, true));
+  });
 
   // Frameworks & journals AI helpers
   $('#fwSuggestBtn').addEventListener('click', suggestFrameworks);
+  $('#fwSuggestCopyBtn').addEventListener('click', ()=> copyAiPrompt(buildFrameworkPrompt(true)));
   $('#jSuggestBtn').addEventListener('click', suggestVenue);
+  $('#jSuggestCopyBtn').addEventListener('click', ()=>{
+    const abstract = $('#jAbstract').value.trim();
+    if(!abstract){ showToast('Paste a title or abstract first'); return; }
+    copyAiPrompt(buildVenuePrompt(abstract, true));
+  });
 
   // Portfolio summary-line drafter
+  const buildPortfolioPrompt = () => 'Draft ONE single-sentence portfolio-website summary line (max 30 words, no markdown, confident plain academic tone, no invented facts or numbers) introducing this researcher, for the top of their personal site. Base it only on the applicant profile below — if it is sparse, keep the line general rather than inventing detail.\n\n' + profileContext();
   $('#pfSummaryBtn').addEventListener('click', async ()=>{
-    const prompt = 'Draft ONE single-sentence portfolio-website summary line (max 30 words, no markdown, confident plain academic tone, no invented facts or numbers) introducing this researcher, for the top of their personal site. Base it only on the applicant profile below — if it is sparse, keep the line general rather than inventing detail.\n\n' + profileContext();
-    await runAi($('#pfSummaryBtn'), $('#pfAiBox'), $('#pfAiOut'), prompt, {modelTier:'complex'});
+    await runAi($('#pfSummaryBtn'), $('#pfAiBox'), $('#pfAiOut'), buildPortfolioPrompt(), {modelTier:'complex'});
   });
+  $('#pfSummaryCopyBtn').addEventListener('click', ()=> copyAiPrompt(buildPortfolioPrompt()));
   $('#pfUseAiBtn').addEventListener('click', ()=>{
-    copyText($('#pfAiOut').textContent.trim(), 'Summary line');
+    const line = $('#pfAiOut').textContent.trim();
+    if(!line){ showToast('Nothing to copy yet'); return; }
+    copyText(line, 'Summary line');
     $('#pfAiBox').classList.remove('show');
   });
   $('#pfDiscardAiBtn').addEventListener('click', ()=> $('#pfAiBox').classList.remove('show'));
+}
+
+/** The sticky desktop sidebar sits just under the sticky masthead, whose height changes as it wraps. */
+function syncMastheadHeight(){
+  const m = $('.masthead');
+  if(m) document.documentElement.style.setProperty('--mh', m.offsetHeight + 'px');
 }
 
 function init(){
@@ -3105,6 +3671,11 @@ function init(){
   // that misses an element) must never leave the whole page blank — the rest of init still runs.
   try{ loadState(); }catch(e){ console.error('Postgraduate Research Planner: loadState failed', e); }
   try{ wireEvents(); }catch(e){ console.error('Postgraduate Research Planner: wireEvents failed', e); }
+  try{
+    syncMastheadHeight();
+    window.addEventListener('resize', syncMastheadHeight);
+    if(window.ResizeObserver) new ResizeObserver(syncMastheadHeight).observe($('.masthead'));
+  }catch(e){ /* sticky offset falls back to the CSS default */ }
   try{ navigate(location.hash.slice(1) || 'dashboard'); }catch(e){ console.error('Postgraduate Research Planner: initial navigate failed', e); }
   try{ initCapabilities(); }catch(e){ console.error('Postgraduate Research Planner: initCapabilities failed', e); }
 }
@@ -3114,9 +3685,6 @@ else init();
 
 })();
 </script>
-
-
-
 
 </body>
 </html>
