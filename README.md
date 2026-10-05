@@ -2,7 +2,7 @@
 
 A free, single-file, privacy-first planner for PhD and MRes applicants — find a supervisor, draft a proposal, write outreach emails, build a CV and portfolio, and track your application timeline. **Researcher Arena**, at the top of the sidebar, adds a layer of research-planning-and-development tools: scholarly-graph and researcher search, dataset discovery with an in-browser dataset health check, a research-gap finder, an eight-style citation generator, compute/GPU guidance, a reproducibility checklist, a statistical-test advisor, and a literature-matrix builder.
 
-**Live site:** https://pathik0007.github.io/postgrad-research-planner/ *(active once GitHub Pages is enabled — see below)*
+**Live site:** https://pathik0007.github.io/postgrad-research-planner/ **
 
 ## Why this exists
 
